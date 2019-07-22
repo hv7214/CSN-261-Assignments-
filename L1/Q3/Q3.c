@@ -4,21 +4,11 @@
 int main() {
     int n = 953; int m = 1268;
     int r[n][m]; 
-    int y = 0;
     FILE *input = fopen("Q3_ip_Red.dat", "r");
-    char c;
 
-    int i = 0; int j = 0;
-    while ((c = getc(input)) != EOF) {
-        if(c != ',' && c != ' ' && c!= '-') {
-            int x = c - '0';
-            // j++;
-            // if(j == n) { j = 0; i++;}
-            // r[i][j] = x;
-            printf("%c", c);
-            y++;
-        }
-    }
+    char buff[2500000];
+    fgets(buff, 2500000, input);
+    printf("%s", buff);
     fclose(input);
     return 0;
 }

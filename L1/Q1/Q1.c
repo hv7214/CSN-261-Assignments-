@@ -79,6 +79,8 @@ void Delete( int Roll_No) {
     temp2 = ptr->next;
     temp1->next = temp2;
     temp2->prev = temp1;
+    if(ptr == head) head = temp2; 
+    
     free(ptr);
 
     printf("%s", "Successfully Deleted!\n");
@@ -170,6 +172,7 @@ int main() {
         printf("%s", "3. Delete\n");
         printf("%s", "4. Sort\n");
         printf("%s", "5. Print\n");
+        printf("%s", "6. Exit\n");
 
         int option;
         scanf("%d", &option);
@@ -196,7 +199,7 @@ int main() {
                     strcpy(address, token);
                     token = strtok(NULL, ",");
                     phn_no = atoi(token);
-                    // printf("%s %s %s %d\n", Name, DOB, address, phn_no);
+
                     if(ptr == 0) { 
                         insert(G_Roll_no, Name, DOB, address, phn_no);
                         G_Roll_no++;
@@ -248,6 +251,12 @@ int main() {
             case 5 : {
                 printList();
                 break;
+            }
+            case 6 : {
+                return 0;
+            }
+            default: {
+                printf("%s", "Wrong input! Try again.");
             }
         }
     }            
