@@ -47,14 +47,16 @@ void push_front(struct deque* dq, int x) {
 }
 
 void push_back(struct deque* dq, int x) {
+    
     if(dq->capacity == dq->length) resize_dbl(dq);
     
     int back = dq->front + dq->length - 1;
     if(back < 0) back = 0;
 
-    dq->length++;
+    if(dq->length == 0) dq->data[back] = x;
+    else dq->data[back+1] = x;
 
-    dq->data[back+1] = x;
+    dq->length++;
 }
 
 void pop_back(struct deque* dq) {
