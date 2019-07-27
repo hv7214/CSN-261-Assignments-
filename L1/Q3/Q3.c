@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -12,6 +12,38 @@ struct image{
 	int n, m;
 	struct pixel **Pixel;
 };
+
+void Write_red_dat() {
+
+	FILE *fp = fopen("Q3_Output/Q3_op_Red.dat", "w");
+	if(fp == NULL) {printf("nf");return;}
+
+	for(int i = 0; i < IMG.n; i++)
+		for(int j = 0; j < IMG.m; j++) 
+			fprintf(fp, "%d,", IMG.Pixel[i][j].R);
+	
+	fclose(fp);		
+}
+
+void Write_green_dat() {
+
+	FILE *fp = fopen("Q3_Output/Q3_op_Green.dat", "w");
+	for(int i = 0; i < IMG.n; i++)
+		for(int j = 0; j < IMG.m; j++) 
+			fprintf(fp, "%d,", IMG.Pixel[i][j].G);
+
+	fclose(fp);		
+}
+
+void Write_blue_dat() {
+
+	FILE *fp = fopen("Q3_Output/Q3_op_Blue.dat", "w");
+	for(int i = 0; i < IMG.n; i++)
+		for(int j = 0; j < IMG.m; j++) 
+			fprintf(fp, "%d,", IMG.Pixel[i][j].B);
+
+	fclose(fp);		
+}
 
 void Read_red() {
 
@@ -30,6 +62,8 @@ void Read_red() {
     		if(i == n) break;
     	}
     }
+
+	fclose(fp);
 }
 
 void Read_green() {
@@ -49,6 +83,8 @@ void Read_green() {
     		if(i == n) break;
     	}
     }
+
+	fclose(fp);
 }
 
 void Read_blue() {
@@ -80,6 +116,7 @@ void Remove_Green() {
 
 			if(*G > R && *G > B) *G = 0;       // remove green shade
 		}
+	Write_green_dat();
 }
 
 void Remove_Red() {
@@ -92,6 +129,7 @@ void Remove_Red() {
 
 			if(*R > G && *R > B) *R = 0;       // remove red shade
 		}
+	Write_red_dat();	
 }
 
 void Remove_Blue() {
@@ -105,6 +143,7 @@ void Remove_Blue() {
 			if(*B > R && *B > G) *B = 0;       // remove blue shade
 			
 		}
+	Write_blue_dat();	
 }
 
 void Preserve_Green() {
@@ -117,6 +156,7 @@ void Preserve_Green() {
 
 			if(G > *R && G > *B) {*B = *R = 0;}       
 		}
+	Write_green_dat();	
 }
 
 void Preserve_Red() {
@@ -129,6 +169,7 @@ void Preserve_Red() {
 
 			if(R > *G && R > *B) {*B = *G = 0;}       
 		}
+	Write_red_dat();	
 }
 
 void Preserve_Blue() {
@@ -141,6 +182,7 @@ void Preserve_Blue() {
 
 			if(B > *R && B > *G) {*G = *R = 0;}       
 		}
+	Write_blue_dat();		
 }
 
 void Pixel_Value(int x, int y) {
