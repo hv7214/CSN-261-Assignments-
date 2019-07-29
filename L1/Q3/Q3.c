@@ -154,7 +154,8 @@ void Preserve_Green() {
 			int G = IMG.Pixel[i][j].G;
 			int *B = &IMG.Pixel[i][j].B;
 
-			if(G > *R && G > *B) {*B = *R = 0;}       
+			if(G < *R && *R > *B) *R = 0;      // Red shade
+			if(G < *B && *R < *B) *B = 0;      // Blue shade  
 		}
 	Write_green_dat();	
 }
@@ -167,7 +168,8 @@ void Preserve_Red() {
 			int *G = &IMG.Pixel[i][j].G;
 			int *B = &IMG.Pixel[i][j].B;
 
-			if(R > *G && R > *B) {*B = *G = 0;}       
+			if(R < *G && *B < *G) *G = 0;
+			if(R < *B && *G < *B) *B = 0;       
 		}
 	Write_red_dat();	
 }
@@ -180,7 +182,8 @@ void Preserve_Blue() {
 			int *G = &IMG.Pixel[i][j].G;
 			int B = IMG.Pixel[i][j].B;
 
-			if(B > *R && B > *G) {*G = *R = 0;}       
+			if(B < *R && *G < *R) *R = 0;
+			if(B < *G && *R < *G) *G = 0;       
 		}
 	Write_blue_dat();		
 }
