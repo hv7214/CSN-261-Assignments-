@@ -245,6 +245,7 @@ int main(void) {
                 break;
             }
             case 6: {
+                printf("CPU Time: ");
                 printf("%f", TOTAL_TIME);
                 return 0;
             }

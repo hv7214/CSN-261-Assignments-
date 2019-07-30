@@ -501,6 +501,7 @@ int main() {
 				break;
 			}
 			case 9 :
+				printf("CPU Time: ");
 				printf("%f", TOTAL_TIME);
 				return 0;
 				break;

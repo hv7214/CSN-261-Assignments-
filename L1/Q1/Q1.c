@@ -27,7 +27,7 @@ struct Node {
     char Name[100];
     char DOB[50];
     char address[200];
-    int phn_no;
+    long long int phn_no;
     struct Node *prev;
     struct Node *next;
 
@@ -49,7 +49,7 @@ void Load_details() {
 	start_t = clock();
 
     char Name[100], DOB[50], address[200];
-    int phn_no, rno;
+    long long int phn_no; int rno;
 
     char filename[31] = "StudentData2.csv";
     char buff[1024];
@@ -382,6 +382,7 @@ int main() {
                 break;
             }
             case 6: {
+                printf("CPU Time: ");
                 printf("%f", TOTAL_TIME);
                 return 0;
             }
