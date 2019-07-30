@@ -1,0 +1,194 @@
+\hypertarget{Q2_8c}{}\section{Q2.\+c File Reference}
+\label{Q2_8c}\index{Q2.\+c@{Q2.\+c}}
+
+
+Dynamic deque.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for Q2.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdeque}{deque}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Q2_8c_aac4a9bf6c900c2d342874bdc31a6ea5f}{init\+\_\+deque} (struct \hyperlink{structdeque}{deque} $\ast$dq, int init\+\_\+capacity)
+\item 
+void \hyperlink{Q2_8c_a02d79fa3e22949f8e78c436f7e78e8ea}{resize\+\_\+dbl} (struct \hyperlink{structdeque}{deque} $\ast$dq)
+\item 
+void \hyperlink{Q2_8c_ac2563e7a3cbdfe741f24899da0f0116d}{resize\+\_\+half} (struct \hyperlink{structdeque}{deque} $\ast$dq)
+\item 
+void \hyperlink{Q2_8c_aaa69f4e45cf34ce9c9852d7c300d07a8}{push\+\_\+front} (struct \hyperlink{structdeque}{deque} $\ast$dq, int x)
+\item 
+void \hyperlink{Q2_8c_a334c5a86bec7928541b48b9b5f176eb9}{push\+\_\+back} (struct \hyperlink{structdeque}{deque} $\ast$dq, int x)
+\item 
+void \hyperlink{Q2_8c_a0126c3f939ae0e563521596258e552c4}{pop\+\_\+back} (struct \hyperlink{structdeque}{deque} $\ast$dq)
+\item 
+void \hyperlink{Q2_8c_a6ecd8144bc88c3970e26df4c408236bd}{pop\+\_\+front} (struct \hyperlink{structdeque}{deque} $\ast$dq)
+\item 
+void \hyperlink{Q2_8c_a7ff0d87adfcc6bcde58ae441dd518c0f}{print\+\_\+dq} (struct \hyperlink{structdeque}{deque} $\ast$dq)
+\item 
+\mbox{\Hypertarget{Q2_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{Q2_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+int {\bfseries main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dynamic deque. 
+
+\begin{DoxyAuthor}{Author}
+Harshit Verma
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+07/24/19 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{Q2_8c_aac4a9bf6c900c2d342874bdc31a6ea5f}\label{Q2_8c_aac4a9bf6c900c2d342874bdc31a6ea5f}} 
+\index{Q2.\+c@{Q2.\+c}!init\+\_\+deque@{init\+\_\+deque}}
+\index{init\+\_\+deque@{init\+\_\+deque}!Q2.\+c@{Q2.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+deque()}{init\_deque()}}
+{\footnotesize\ttfamily void init\+\_\+deque (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdeque}{deque} $\ast$}]{dq,  }\item[{int}]{init\+\_\+capacity }\end{DoxyParamCaption})}
+
+This method will be used to initiate the deque 
+\begin{DoxyParams}{Parameters}
+{\em dq} & deque \\
+\hline
+{\em init} & capacity Initial Capacity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q2_8c_a0126c3f939ae0e563521596258e552c4}\label{Q2_8c_a0126c3f939ae0e563521596258e552c4}} 
+\index{Q2.\+c@{Q2.\+c}!pop\+\_\+back@{pop\+\_\+back}}
+\index{pop\+\_\+back@{pop\+\_\+back}!Q2.\+c@{Q2.\+c}}
+\subsubsection{\texorpdfstring{pop\+\_\+back()}{pop\_back()}}
+{\footnotesize\ttfamily void pop\+\_\+back (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdeque}{deque} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+This method will be used to pop data from back 
+\begin{DoxyParams}{Parameters}
+{\em dq} & deque \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q2_8c_a6ecd8144bc88c3970e26df4c408236bd}\label{Q2_8c_a6ecd8144bc88c3970e26df4c408236bd}} 
+\index{Q2.\+c@{Q2.\+c}!pop\+\_\+front@{pop\+\_\+front}}
+\index{pop\+\_\+front@{pop\+\_\+front}!Q2.\+c@{Q2.\+c}}
+\subsubsection{\texorpdfstring{pop\+\_\+front()}{pop\_front()}}
+{\footnotesize\ttfamily void pop\+\_\+front (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdeque}{deque} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+This method will be used to pop data from front 
+\begin{DoxyParams}{Parameters}
+{\em dq} & deque \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q2_8c_a7ff0d87adfcc6bcde58ae441dd518c0f}\label{Q2_8c_a7ff0d87adfcc6bcde58ae441dd518c0f}} 
+\index{Q2.\+c@{Q2.\+c}!print\+\_\+dq@{print\+\_\+dq}}
+\index{print\+\_\+dq@{print\+\_\+dq}!Q2.\+c@{Q2.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+dq()}{print\_dq()}}
+{\footnotesize\ttfamily void print\+\_\+dq (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdeque}{deque} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+This method will be used to print deque 
+\begin{DoxyParams}{Parameters}
+{\em dq} & deque \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q2_8c_a334c5a86bec7928541b48b9b5f176eb9}\label{Q2_8c_a334c5a86bec7928541b48b9b5f176eb9}} 
+\index{Q2.\+c@{Q2.\+c}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!Q2.\+c@{Q2.\+c}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}}
+{\footnotesize\ttfamily void push\+\_\+back (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdeque}{deque} $\ast$}]{dq,  }\item[{int}]{x }\end{DoxyParamCaption})}
+
+This method will be used to push data at back 
+\begin{DoxyParams}{Parameters}
+{\em dq} & deque \\
+\hline
+{\em x} & value to be pushed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q2_8c_aaa69f4e45cf34ce9c9852d7c300d07a8}\label{Q2_8c_aaa69f4e45cf34ce9c9852d7c300d07a8}} 
+\index{Q2.\+c@{Q2.\+c}!push\+\_\+front@{push\+\_\+front}}
+\index{push\+\_\+front@{push\+\_\+front}!Q2.\+c@{Q2.\+c}}
+\subsubsection{\texorpdfstring{push\+\_\+front()}{push\_front()}}
+{\footnotesize\ttfamily void push\+\_\+front (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdeque}{deque} $\ast$}]{dq,  }\item[{int}]{x }\end{DoxyParamCaption})}
+
+This method will be used to push data to front 
+\begin{DoxyParams}{Parameters}
+{\em dq} & deque \\
+\hline
+{\em x} & value to be pushed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q2_8c_a02d79fa3e22949f8e78c436f7e78e8ea}\label{Q2_8c_a02d79fa3e22949f8e78c436f7e78e8ea}} 
+\index{Q2.\+c@{Q2.\+c}!resize\+\_\+dbl@{resize\+\_\+dbl}}
+\index{resize\+\_\+dbl@{resize\+\_\+dbl}!Q2.\+c@{Q2.\+c}}
+\subsubsection{\texorpdfstring{resize\+\_\+dbl()}{resize\_dbl()}}
+{\footnotesize\ttfamily void resize\+\_\+dbl (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdeque}{deque} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+This method will be used to increase the size of deque to double 
+\begin{DoxyParams}{Parameters}
+{\em dq} & deque \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q2_8c_ac2563e7a3cbdfe741f24899da0f0116d}\label{Q2_8c_ac2563e7a3cbdfe741f24899da0f0116d}} 
+\index{Q2.\+c@{Q2.\+c}!resize\+\_\+half@{resize\+\_\+half}}
+\index{resize\+\_\+half@{resize\+\_\+half}!Q2.\+c@{Q2.\+c}}
+\subsubsection{\texorpdfstring{resize\+\_\+half()}{resize\_half()}}
+{\footnotesize\ttfamily void resize\+\_\+half (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdeque}{deque} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+This method will be used to decrease the size of deque by half 
+\begin{DoxyParams}{Parameters}
+{\em dq} & deque \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}

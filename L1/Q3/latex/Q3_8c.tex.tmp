@@ -1,0 +1,265 @@
+\hypertarget{Q3_8c}{}\section{Q3.\+c File Reference}
+\label{Q3_8c}\index{Q3.\+c@{Q3.\+c}}
+
+
+Image transformer.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for Q3.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpixel}{pixel}
+\item 
+struct \hyperlink{structimage}{image}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Q3_8c_a9142417505d65bc51a1599c0938f1500}{Write\+\_\+red\+\_\+dat} ()
+\item 
+void \hyperlink{Q3_8c_a57037066c67817fd075bab439b2554bb}{Write\+\_\+green\+\_\+dat} ()
+\item 
+void \hyperlink{Q3_8c_a1e063e4a3e59fc2742b9656356865fb0}{Write\+\_\+blue\+\_\+dat} ()
+\item 
+void \hyperlink{Q3_8c_a09ecef8c18f8b5bab2d01d0451e907d9}{Read\+\_\+red} ()
+\item 
+void \hyperlink{Q3_8c_a167cb5d6357903f1fc9b94b629ab4043}{Read\+\_\+green} ()
+\item 
+void \hyperlink{Q3_8c_aac13f719ec7108f844fea0319006bde1}{Read\+\_\+blue} ()
+\item 
+void \hyperlink{Q3_8c_aadd9541452fb9fa7226ed04ae2034d9e}{Remove\+\_\+\+Green} ()
+\item 
+void \hyperlink{Q3_8c_a78cbe457ac1ce0a789fd5f4cf628fd3c}{Remove\+\_\+\+Red} ()
+\item 
+void \hyperlink{Q3_8c_aae7185588ba0e62c9ba534b49caf7546}{Remove\+\_\+\+Blue} ()
+\item 
+void \hyperlink{Q3_8c_a2b8b87ad77b4b00d28663d9ea49cb0c1}{Preserve\+\_\+\+Green} ()
+\item 
+void \hyperlink{Q3_8c_a04a759a04b38092678dd187436ca7269}{Preserve\+\_\+\+Red} ()
+\item 
+void \hyperlink{Q3_8c_ac64459697397a83e27ec5bd8f2c0ad25}{Preserve\+\_\+\+Blue} ()
+\item 
+void \hyperlink{Q3_8c_ab0ebf1509b4be15c983555677f247a17}{Pixel\+\_\+\+Value} (int x, int y)
+\item 
+void \hyperlink{Q3_8c_a86b12ff79f29ff661feee57e40627b74}{print\+\_\+component} (char color\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{Q3_8c_afd3e4011633bac3898d388953f413695}{init\+\_\+image} (int n, int m)
+\item 
+\mbox{\Hypertarget{Q3_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Q3_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Q3_8c_a9fcffe7d4957d51052113cd991ffdde3}\label{Q3_8c_a9fcffe7d4957d51052113cd991ffdde3}} 
+struct \hyperlink{structimage}{image} {\bfseries I\+MG}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Image transformer. 
+
+\begin{DoxyAuthor}{Author}
+Harshit Verma
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+07/24/19 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{Q3_8c_afd3e4011633bac3898d388953f413695}\label{Q3_8c_afd3e4011633bac3898d388953f413695}} 
+\index{Q3.\+c@{Q3.\+c}!init\+\_\+image@{init\+\_\+image}}
+\index{init\+\_\+image@{init\+\_\+image}!Q3.\+c@{Q3.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+image()}{init\_image()}}
+{\footnotesize\ttfamily void init\+\_\+image (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{m }\end{DoxyParamCaption})}
+
+This method will be used to initialize image \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em color} & which color component to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q3_8c_ab0ebf1509b4be15c983555677f247a17}\label{Q3_8c_ab0ebf1509b4be15c983555677f247a17}} 
+\index{Q3.\+c@{Q3.\+c}!Pixel\+\_\+\+Value@{Pixel\+\_\+\+Value}}
+\index{Pixel\+\_\+\+Value@{Pixel\+\_\+\+Value}!Q3.\+c@{Q3.\+c}}
+\subsubsection{\texorpdfstring{Pixel\+\_\+\+Value()}{Pixel\_Value()}}
+{\footnotesize\ttfamily void Pixel\+\_\+\+Value (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+This method will be used to print pixel value \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q3_8c_ac64459697397a83e27ec5bd8f2c0ad25}\label{Q3_8c_ac64459697397a83e27ec5bd8f2c0ad25}} 
+\index{Q3.\+c@{Q3.\+c}!Preserve\+\_\+\+Blue@{Preserve\+\_\+\+Blue}}
+\index{Preserve\+\_\+\+Blue@{Preserve\+\_\+\+Blue}!Q3.\+c@{Q3.\+c}}
+\subsubsection{\texorpdfstring{Preserve\+\_\+\+Blue()}{Preserve\_Blue()}}
+{\footnotesize\ttfamily void Preserve\+\_\+\+Blue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method will be used to remove preserve blue shade \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q3_8c_a2b8b87ad77b4b00d28663d9ea49cb0c1}\label{Q3_8c_a2b8b87ad77b4b00d28663d9ea49cb0c1}} 
+\index{Q3.\+c@{Q3.\+c}!Preserve\+\_\+\+Green@{Preserve\+\_\+\+Green}}
+\index{Preserve\+\_\+\+Green@{Preserve\+\_\+\+Green}!Q3.\+c@{Q3.\+c}}
+\subsubsection{\texorpdfstring{Preserve\+\_\+\+Green()}{Preserve\_Green()}}
+{\footnotesize\ttfamily void Preserve\+\_\+\+Green (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method will be used to remove preserve green shade \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q3_8c_a04a759a04b38092678dd187436ca7269}\label{Q3_8c_a04a759a04b38092678dd187436ca7269}} 
+\index{Q3.\+c@{Q3.\+c}!Preserve\+\_\+\+Red@{Preserve\+\_\+\+Red}}
+\index{Preserve\+\_\+\+Red@{Preserve\+\_\+\+Red}!Q3.\+c@{Q3.\+c}}
+\subsubsection{\texorpdfstring{Preserve\+\_\+\+Red()}{Preserve\_Red()}}
+{\footnotesize\ttfamily void Preserve\+\_\+\+Red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method will be used to remove preserve red shade \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q3_8c_a86b12ff79f29ff661feee57e40627b74}\label{Q3_8c_a86b12ff79f29ff661feee57e40627b74}} 
+\index{Q3.\+c@{Q3.\+c}!print\+\_\+component@{print\+\_\+component}}
+\index{print\+\_\+component@{print\+\_\+component}!Q3.\+c@{Q3.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+component()}{print\_component()}}
+{\footnotesize\ttfamily void print\+\_\+component (\begin{DoxyParamCaption}\item[{char}]{color\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+This method will be used to print color component array \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em color} & which color component to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q3_8c_aac13f719ec7108f844fea0319006bde1}\label{Q3_8c_aac13f719ec7108f844fea0319006bde1}} 
+\index{Q3.\+c@{Q3.\+c}!Read\+\_\+blue@{Read\+\_\+blue}}
+\index{Read\+\_\+blue@{Read\+\_\+blue}!Q3.\+c@{Q3.\+c}}
+\subsubsection{\texorpdfstring{Read\+\_\+blue()}{Read\_blue()}}
+{\footnotesize\ttfamily void Read\+\_\+blue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method will be used to read data in o/p file \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q3_8c_a167cb5d6357903f1fc9b94b629ab4043}\label{Q3_8c_a167cb5d6357903f1fc9b94b629ab4043}} 
+\index{Q3.\+c@{Q3.\+c}!Read\+\_\+green@{Read\+\_\+green}}
+\index{Read\+\_\+green@{Read\+\_\+green}!Q3.\+c@{Q3.\+c}}
+\subsubsection{\texorpdfstring{Read\+\_\+green()}{Read\_green()}}
+{\footnotesize\ttfamily void Read\+\_\+green (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method will be used to read data in o/p file \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q3_8c_a09ecef8c18f8b5bab2d01d0451e907d9}\label{Q3_8c_a09ecef8c18f8b5bab2d01d0451e907d9}} 
+\index{Q3.\+c@{Q3.\+c}!Read\+\_\+red@{Read\+\_\+red}}
+\index{Read\+\_\+red@{Read\+\_\+red}!Q3.\+c@{Q3.\+c}}
+\subsubsection{\texorpdfstring{Read\+\_\+red()}{Read\_red()}}
+{\footnotesize\ttfamily void Read\+\_\+red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method will be used to read data in o/p file \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q3_8c_aae7185588ba0e62c9ba534b49caf7546}\label{Q3_8c_aae7185588ba0e62c9ba534b49caf7546}} 
+\index{Q3.\+c@{Q3.\+c}!Remove\+\_\+\+Blue@{Remove\+\_\+\+Blue}}
+\index{Remove\+\_\+\+Blue@{Remove\+\_\+\+Blue}!Q3.\+c@{Q3.\+c}}
+\subsubsection{\texorpdfstring{Remove\+\_\+\+Blue()}{Remove\_Blue()}}
+{\footnotesize\ttfamily void Remove\+\_\+\+Blue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method will be used to remove blue shade \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q3_8c_aadd9541452fb9fa7226ed04ae2034d9e}\label{Q3_8c_aadd9541452fb9fa7226ed04ae2034d9e}} 
+\index{Q3.\+c@{Q3.\+c}!Remove\+\_\+\+Green@{Remove\+\_\+\+Green}}
+\index{Remove\+\_\+\+Green@{Remove\+\_\+\+Green}!Q3.\+c@{Q3.\+c}}
+\subsubsection{\texorpdfstring{Remove\+\_\+\+Green()}{Remove\_Green()}}
+{\footnotesize\ttfamily void Remove\+\_\+\+Green (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method will be used to remove green shade \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q3_8c_a78cbe457ac1ce0a789fd5f4cf628fd3c}\label{Q3_8c_a78cbe457ac1ce0a789fd5f4cf628fd3c}} 
+\index{Q3.\+c@{Q3.\+c}!Remove\+\_\+\+Red@{Remove\+\_\+\+Red}}
+\index{Remove\+\_\+\+Red@{Remove\+\_\+\+Red}!Q3.\+c@{Q3.\+c}}
+\subsubsection{\texorpdfstring{Remove\+\_\+\+Red()}{Remove\_Red()}}
+{\footnotesize\ttfamily void Remove\+\_\+\+Red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method will be used to remove red shade \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q3_8c_a1e063e4a3e59fc2742b9656356865fb0}\label{Q3_8c_a1e063e4a3e59fc2742b9656356865fb0}} 
+\index{Q3.\+c@{Q3.\+c}!Write\+\_\+blue\+\_\+dat@{Write\+\_\+blue\+\_\+dat}}
+\index{Write\+\_\+blue\+\_\+dat@{Write\+\_\+blue\+\_\+dat}!Q3.\+c@{Q3.\+c}}
+\subsubsection{\texorpdfstring{Write\+\_\+blue\+\_\+dat()}{Write\_blue\_dat()}}
+{\footnotesize\ttfamily void Write\+\_\+blue\+\_\+dat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method will be used to write data in o/p file \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q3_8c_a57037066c67817fd075bab439b2554bb}\label{Q3_8c_a57037066c67817fd075bab439b2554bb}} 
+\index{Q3.\+c@{Q3.\+c}!Write\+\_\+green\+\_\+dat@{Write\+\_\+green\+\_\+dat}}
+\index{Write\+\_\+green\+\_\+dat@{Write\+\_\+green\+\_\+dat}!Q3.\+c@{Q3.\+c}}
+\subsubsection{\texorpdfstring{Write\+\_\+green\+\_\+dat()}{Write\_green\_dat()}}
+{\footnotesize\ttfamily void Write\+\_\+green\+\_\+dat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method will be used to write data in o/p file \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q3_8c_a9142417505d65bc51a1599c0938f1500}\label{Q3_8c_a9142417505d65bc51a1599c0938f1500}} 
+\index{Q3.\+c@{Q3.\+c}!Write\+\_\+red\+\_\+dat@{Write\+\_\+red\+\_\+dat}}
+\index{Write\+\_\+red\+\_\+dat@{Write\+\_\+red\+\_\+dat}!Q3.\+c@{Q3.\+c}}
+\subsubsection{\texorpdfstring{Write\+\_\+red\+\_\+dat()}{Write\_red\_dat()}}
+{\footnotesize\ttfamily void Write\+\_\+red\+\_\+dat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method will be used to write data in o/p file \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/24/2019 
+\end{DoxyDate}

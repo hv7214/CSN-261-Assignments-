@@ -1,0 +1,23 @@
+\hypertarget{structimage}{}\section{image Struct Reference}
+\label{structimage}\index{image@{image}}
+
+
+Collaboration diagram for image\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structimage_a67dc2999e33bb7b06f57523e7dd9f0dc}\label{structimage_a67dc2999e33bb7b06f57523e7dd9f0dc}} 
+int {\bfseries n}
+\item 
+\mbox{\Hypertarget{structimage_a593ffb6e3b823cf24df856643ba92efc}\label{structimage_a593ffb6e3b823cf24df856643ba92efc}} 
+int {\bfseries m}
+\item 
+\mbox{\Hypertarget{structimage_a948848a59125f93533e2152ef71f9303}\label{structimage_a948848a59125f93533e2152ef71f9303}} 
+struct \hyperlink{structpixel}{pixel} $\ast$$\ast$ {\bfseries Pixel}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Q3.\+c\end{DoxyCompactItemize}
