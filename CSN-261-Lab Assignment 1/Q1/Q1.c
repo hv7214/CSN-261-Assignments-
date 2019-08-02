@@ -168,7 +168,10 @@ void insert(int row) {
 
     struct Node *temp = (struct Node*) malloc (sizeof(struct Node));
     
-    temp->Roll_No = Loader[row-2].Roll_No;
+    
+    if(ptr == 0) { temp->Roll_No = Loader[row-2].Roll_No; }
+    else { temp->Roll_No = unusedRollNo[ptr]; ptr--;}
+
     strcpy(temp->Name, Loader[row-2].Name);
     strcpy(temp->DOB, Loader[row-2].DOB);
     strcpy(temp->address, Loader[row-2].address);
@@ -185,7 +188,7 @@ void insert(int row) {
     temp->next = head;
     last->next = temp;
     temp->prev = last;
-
+    
     end_t = clock();
     TOTAL_TIME += (double)(end_t - start_t) / CLOCKS_PER_SEC;
 }
@@ -383,7 +386,7 @@ int main() {
             }
             case 6: {
                 printf("CPU Time: ");
-                printf("%f", TOTAL_TIME);
+                printf("%f\n", TOTAL_TIME);
                 return 0;
             }
         }

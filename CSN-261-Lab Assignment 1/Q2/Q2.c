@@ -214,7 +214,8 @@ int main(void) {
         printf("%s\n", "3. Pop back");
         printf("%s\n", "4. Pop front");
         printf("%s\n", "5. Print");
-        printf("%s\n", "6. Exit");
+        printf("6. Length & Capacity\n");
+        printf("%s\n", "7. Exit");
 
         int option; 
         scanf("%d", &option);
@@ -244,7 +245,11 @@ int main(void) {
                 TOTAL_TIME += print_dq(dq);    
                 break;
             }
-            case 6: {
+            case 6 : { 
+                printf("%d %d\n", dq->length, dq->capacity);
+                break;
+            }
+            case 7: {
                 printf("CPU Time: ");
                 printf("%f", TOTAL_TIME);
                 return 0;
