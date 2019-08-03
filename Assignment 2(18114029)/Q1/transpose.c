@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include <stdlib.h> 
-#include <math.h>
 #include<string.h>
 
 struct key{
@@ -76,5 +75,11 @@ int main(int argc, char *argv[]) {
 
     Transpose(Key, (char *)text, (char *)encrypted_text);
 
+    // for(int i = 0; i < row; i++)
+    //     for(int j = 0; j < Key.n; j++)
+    //         if(encrypted_text[i][j] != '\0')
+    //             printf("%c", encrypted_text[i][j]);
+    //         else 
+    //             printf(" ");    
     write_file((char *) encrypted_text, Key);
 }

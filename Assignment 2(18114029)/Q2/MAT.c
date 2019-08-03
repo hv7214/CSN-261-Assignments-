@@ -1,9 +1,18 @@
+/**
+* @file Q2.c
+* @brief Medial axis transformation (MAT) 
+*
+* @author Harshit Verma
+*
+* @date 08/5/19
+*/
 #include<stdio.h>
 #include <stdlib.h> 
 #include <math.h>
 #include <stdbool.h> 
 #include<string.h>
 
+//! Quadtree node
 struct node {
     int label;
     int bit;
@@ -13,6 +22,11 @@ struct node {
 int N, n, **a, **msa, top = 0;
 struct node quadtree[6000];
 
+/**
+* This method will be used to get value of input array from input.txt file
+* @author harshit Verma
+* @date 08/5/2019
+*/
 void initialize_n() {
 
     FILE *fp = fopen("input.txt", "r");
@@ -28,6 +42,11 @@ void initialize_n() {
     n = sqrt(x);
 }
 
+/**
+* This method will be used to read the array from input.txt file
+* @author harshit Verma
+* @date 08/5/2019
+*/
 void read_inputfile() {
 
     FILE *fp = fopen("input.txt", "r");
@@ -44,11 +63,23 @@ void read_inputfile() {
         if(j == n+1) { j = 1; i++;}
     }
 }
+
+/**
+* This method will be used to normalize the array size to pow of 2.
+* @param n the size of input array 
+* @author harshit Verma
+* @date 08/5/2019
+*/
 void Preprocess(int n) {
 
     N = pow(2, ceil(log2(n)));
 }
 
+/**
+* This method will be used to check if subarray has same bits 
+* @author harshit Verma
+* @date 08/5/2019
+*/
 bool same_bits(int x1, int y1, int x2, int y2) {
 
     int bit = a[x1][y1];
@@ -60,6 +91,11 @@ bool same_bits(int x1, int y1, int x2, int y2) {
     return true;
 }
 
+/**
+* This method will be used to fill the maximal square array with node value
+* @author harshit Verma
+* @date 08/5/2019
+*/
 void fill_msa(int x1, int y1, int x2, int y2, int node) {
 
     for(int i = x1; i <= x2; i++)
@@ -67,6 +103,11 @@ void fill_msa(int x1, int y1, int x2, int y2, int node) {
             msa[i][j] = node;
 }
 
+/**
+* This recursive method will be used to set the msa array with node values 
+* @author harshit Verma
+* @date 08/5/2019
+*/
 int MAT(int x1, int y1, int x2, int y2, int node, int level) {
     
     if(same_bits(x1, y1, x2, y2)) { 

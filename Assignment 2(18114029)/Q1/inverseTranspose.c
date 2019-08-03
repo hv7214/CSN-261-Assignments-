@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include <stdlib.h> 
-#include <math.h>
 #include<string.h>
 
 struct key{
@@ -30,6 +29,47 @@ void read_file(char filename[], char *output, struct key Key) {
     }
 }
 
-int main() {
+void write_file(char *decrypted_text, struct key Key) {
+ 
+    FILE *fp = fopen("decryptedOutputfile.txt", "w");
 
+    for(int i = 0; i < row; i++)
+        for(int j = 0; j < Key.n; j++) {
+            char c = *((decrypted_text + (i * Key.n)) + j);
+            fputc(c, fp);
+        }
+        
+    fclose(fp);
+}
+
+void decrypt(char *encrypted_text, char *decrypted_text, struct key Key) {
+
+    for(int i = 0; i < row; i++)
+        for(int j = 0; j < Key.n; j++) {
+            *(decrypted_text + i * Key.n + ((Key.a * j + Key.b) % Key.n)) = *(encrypted_text + i * Key.n + j);
+        }
+}
+
+int main(int argc, char *argv[]) {
+    
+    if(argc < 5) {
+        printf("%s\n", "Not enough arguments");
+        return 0;
+    }
+
+    struct key Key;
+    Key.a = atoi(argv[1]);
+    Key.b = atoi(argv[2]);
+    Key.n = atoi(argv[3]);
+
+    char encrypted_text[6000][Key.n], decrypted_text[6000][Key.n], filename[100];
+
+    strcpy(filename, argv[4]);
+
+    read_file(filename, (char *)encrypted_text, Key);
+
+    decrypt((char *)encrypted_text, (char *)decrypted_text, Key);
+    
+    write_file((char *)decrypted_text, Key);
+            
 }
