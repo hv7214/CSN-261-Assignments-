@@ -1,0 +1,99 @@
+\hypertarget{inverseTranspose_8c}{}\section{inverse\+Transpose.\+c File Reference}
+\label{inverseTranspose_8c}\index{inverse\+Transpose.\+c@{inverse\+Transpose.\+c}}
+
+
+Decrypts the encrypted text.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for inverse\+Transpose.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structkey}{key}
+\begin{DoxyCompactList}\small\item\em Encryption Key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{inverseTranspose_8c_a3e2bb97890b4277d4c59c7e5986ff4a3}{read\+\_\+file} (char filename\mbox{[}$\,$\mbox{]}, char $\ast$output, struct \hyperlink{structkey}{key} Key)
+\item 
+void \hyperlink{inverseTranspose_8c_ab3be6d004e4d5190e3a90a8638b0c012}{write\+\_\+file} (char $\ast$decrypted\+\_\+text, struct \hyperlink{structkey}{key} Key)
+\item 
+void \hyperlink{inverseTranspose_8c_a6eeee56c4648064bec1fb9addceabdd5}{generate\+\_\+decryption\+\_\+key} (struct \hyperlink{structkey}{key} $\ast$decryption\+\_\+key, struct \hyperlink{structkey}{key} encryption\+\_\+key)
+\item 
+void \hyperlink{inverseTranspose_8c_a3f5c755102052a2b8bef91718789b2d5}{decrypt} (char $\ast$encrypted\+\_\+text, char $\ast$decrypted\+\_\+text, struct \hyperlink{structkey}{key} Key)
+\item 
+\mbox{\Hypertarget{inverseTranspose_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{inverseTranspose_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{inverseTranspose_8c_af1d3cff2e4538e23400e260bae3dadad}\label{inverseTranspose_8c_af1d3cff2e4538e23400e260bae3dadad}} 
+int {\bfseries row} = 0
+\item 
+\mbox{\Hypertarget{inverseTranspose_8c_a7d479fb422926519a037ee354b197738}\label{inverseTranspose_8c_a7d479fb422926519a037ee354b197738}} 
+double {\bfseries T\+O\+T\+A\+L\+\_\+\+T\+I\+ME} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Decrypts the encrypted text. 
+
+\begin{DoxyAuthor}{Author}
+Harshit Verma
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/19 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{inverseTranspose_8c_a3f5c755102052a2b8bef91718789b2d5}\label{inverseTranspose_8c_a3f5c755102052a2b8bef91718789b2d5}} 
+\index{inverse\+Transpose.\+c@{inverse\+Transpose.\+c}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!inverse\+Transpose.\+c@{inverse\+Transpose.\+c}}
+\subsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily void decrypt (\begin{DoxyParamCaption}\item[{char $\ast$}]{encrypted\+\_\+text,  }\item[{char $\ast$}]{decrypted\+\_\+text,  }\item[{struct \hyperlink{structkey}{key}}]{Key }\end{DoxyParamCaption})}
+
+This method will be used to decrypt the encrypted text \begin{DoxyAuthor}{Author}
+Harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{inverseTranspose_8c_a6eeee56c4648064bec1fb9addceabdd5}\label{inverseTranspose_8c_a6eeee56c4648064bec1fb9addceabdd5}} 
+\index{inverse\+Transpose.\+c@{inverse\+Transpose.\+c}!generate\+\_\+decryption\+\_\+key@{generate\+\_\+decryption\+\_\+key}}
+\index{generate\+\_\+decryption\+\_\+key@{generate\+\_\+decryption\+\_\+key}!inverse\+Transpose.\+c@{inverse\+Transpose.\+c}}
+\subsubsection{\texorpdfstring{generate\+\_\+decryption\+\_\+key()}{generate\_decryption\_key()}}
+{\footnotesize\ttfamily void generate\+\_\+decryption\+\_\+key (\begin{DoxyParamCaption}\item[{struct \hyperlink{structkey}{key} $\ast$}]{decryption\+\_\+key,  }\item[{struct \hyperlink{structkey}{key}}]{encryption\+\_\+key }\end{DoxyParamCaption})}
+
+Generating a for decryption key
+
+Generating b for decryption key \mbox{\Hypertarget{inverseTranspose_8c_a3e2bb97890b4277d4c59c7e5986ff4a3}\label{inverseTranspose_8c_a3e2bb97890b4277d4c59c7e5986ff4a3}} 
+\index{inverse\+Transpose.\+c@{inverse\+Transpose.\+c}!read\+\_\+file@{read\+\_\+file}}
+\index{read\+\_\+file@{read\+\_\+file}!inverse\+Transpose.\+c@{inverse\+Transpose.\+c}}
+\subsubsection{\texorpdfstring{read\+\_\+file()}{read\_file()}}
+{\footnotesize\ttfamily void read\+\_\+file (\begin{DoxyParamCaption}\item[{char}]{filename\mbox{[}$\,$\mbox{]},  }\item[{char $\ast$}]{output,  }\item[{struct \hyperlink{structkey}{key}}]{Key }\end{DoxyParamCaption})}
+
+This method will be used to encypted text from outputfile.\+txt file \begin{DoxyAuthor}{Author}
+Harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{inverseTranspose_8c_ab3be6d004e4d5190e3a90a8638b0c012}\label{inverseTranspose_8c_ab3be6d004e4d5190e3a90a8638b0c012}} 
+\index{inverse\+Transpose.\+c@{inverse\+Transpose.\+c}!write\+\_\+file@{write\+\_\+file}}
+\index{write\+\_\+file@{write\+\_\+file}!inverse\+Transpose.\+c@{inverse\+Transpose.\+c}}
+\subsubsection{\texorpdfstring{write\+\_\+file()}{write\_file()}}
+{\footnotesize\ttfamily void write\+\_\+file (\begin{DoxyParamCaption}\item[{char $\ast$}]{decrypted\+\_\+text,  }\item[{struct \hyperlink{structkey}{key}}]{Key }\end{DoxyParamCaption})}
+
+This method will be used to write decrypted text to decrypted\+Outputfile.\+txt \begin{DoxyAuthor}{Author}
+Harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/2019 
+\end{DoxyDate}

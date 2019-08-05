@@ -1,0 +1,153 @@
+\hypertarget{MAT_8c}{}\section{M\+A\+T.\+c File Reference}
+\label{MAT_8c}\index{M\+A\+T.\+c@{M\+A\+T.\+c}}
+
+
+Medial axis transformation (M\+AT)  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for M\+A\+T.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnode}{node}
+\begin{DoxyCompactList}\small\item\em Quadtree node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{MAT_8c_abf9f6d89541302353593bda79b8184d8}{initialize\+\_\+n} ()
+\item 
+void \hyperlink{MAT_8c_ab70cc76fff672f86c37003cb307eb4d3}{read\+\_\+inputfile} ()
+\item 
+void \hyperlink{MAT_8c_a4aff5226b1a4fc0c90e5b647d5d2f685}{Preprocess} (int n)
+\item 
+bool \hyperlink{MAT_8c_a0524f1637ce8ca345bea43c1ee2a6d1d}{same\+\_\+bits} (int x1, int y1, int x2, int y2)
+\item 
+void \hyperlink{MAT_8c_ac674b4ea09d634053e217e9940c73aad}{fill\+\_\+msa} (int x1, int y1, int x2, int y2, int \hyperlink{structnode}{node})
+\item 
+int \hyperlink{MAT_8c_a0a44780778d08c5257f7aa608304717f}{M\+AT} (int x1, int y1, int x2, int y2, int \hyperlink{structnode}{node}, int level)
+\item 
+\mbox{\Hypertarget{MAT_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{MAT_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{MAT_8c_a7722c8ecbb62d99aee7ce68b1752f337}\label{MAT_8c_a7722c8ecbb62d99aee7ce68b1752f337}} 
+int {\bfseries N}
+\item 
+\mbox{\Hypertarget{MAT_8c_a76f11d9a0a47b94f72c2d0e77fb32240}\label{MAT_8c_a76f11d9a0a47b94f72c2d0e77fb32240}} 
+int {\bfseries n}
+\item 
+\mbox{\Hypertarget{MAT_8c_a4132d69b3eb98225256581baef59ba81}\label{MAT_8c_a4132d69b3eb98225256581baef59ba81}} 
+int $\ast$$\ast$ {\bfseries a}
+\item 
+\mbox{\Hypertarget{MAT_8c_ab92344413d58382530cfe7eee3360061}\label{MAT_8c_ab92344413d58382530cfe7eee3360061}} 
+int $\ast$$\ast$ {\bfseries msa}
+\item 
+\mbox{\Hypertarget{MAT_8c_af93f4f37fc2ad9c37af4a715423b110c}\label{MAT_8c_af93f4f37fc2ad9c37af4a715423b110c}} 
+int {\bfseries top} = 0
+\item 
+\mbox{\Hypertarget{MAT_8c_ae744d880c577f01148422fa7dbd99cbc}\label{MAT_8c_ae744d880c577f01148422fa7dbd99cbc}} 
+struct \hyperlink{structnode}{node} {\bfseries quadtree} \mbox{[}6000\mbox{]}
+\item 
+\mbox{\Hypertarget{MAT_8c_a7d479fb422926519a037ee354b197738}\label{MAT_8c_a7d479fb422926519a037ee354b197738}} 
+double {\bfseries T\+O\+T\+A\+L\+\_\+\+T\+I\+ME} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Medial axis transformation (M\+AT) 
+
+\begin{DoxyAuthor}{Author}
+Harshit Verma
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/19 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{MAT_8c_ac674b4ea09d634053e217e9940c73aad}\label{MAT_8c_ac674b4ea09d634053e217e9940c73aad}} 
+\index{M\+A\+T.\+c@{M\+A\+T.\+c}!fill\+\_\+msa@{fill\+\_\+msa}}
+\index{fill\+\_\+msa@{fill\+\_\+msa}!M\+A\+T.\+c@{M\+A\+T.\+c}}
+\subsubsection{\texorpdfstring{fill\+\_\+msa()}{fill\_msa()}}
+{\footnotesize\ttfamily void fill\+\_\+msa (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2,  }\item[{int}]{node }\end{DoxyParamCaption})}
+
+This method will be used to fill the maximal square array with node value \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{MAT_8c_abf9f6d89541302353593bda79b8184d8}\label{MAT_8c_abf9f6d89541302353593bda79b8184d8}} 
+\index{M\+A\+T.\+c@{M\+A\+T.\+c}!initialize\+\_\+n@{initialize\+\_\+n}}
+\index{initialize\+\_\+n@{initialize\+\_\+n}!M\+A\+T.\+c@{M\+A\+T.\+c}}
+\subsubsection{\texorpdfstring{initialize\+\_\+n()}{initialize\_n()}}
+{\footnotesize\ttfamily void initialize\+\_\+n (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method will be used to get value of input array from input.\+txt file \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{MAT_8c_a0a44780778d08c5257f7aa608304717f}\label{MAT_8c_a0a44780778d08c5257f7aa608304717f}} 
+\index{M\+A\+T.\+c@{M\+A\+T.\+c}!M\+AT@{M\+AT}}
+\index{M\+AT@{M\+AT}!M\+A\+T.\+c@{M\+A\+T.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+T()}{MAT()}}
+{\footnotesize\ttfamily int M\+AT (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2,  }\item[{int}]{node,  }\item[{int}]{level }\end{DoxyParamCaption})}
+
+This recursive method will be used to set the msa array with node values \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{MAT_8c_a4aff5226b1a4fc0c90e5b647d5d2f685}\label{MAT_8c_a4aff5226b1a4fc0c90e5b647d5d2f685}} 
+\index{M\+A\+T.\+c@{M\+A\+T.\+c}!Preprocess@{Preprocess}}
+\index{Preprocess@{Preprocess}!M\+A\+T.\+c@{M\+A\+T.\+c}}
+\subsubsection{\texorpdfstring{Preprocess()}{Preprocess()}}
+{\footnotesize\ttfamily void Preprocess (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+This method will be used to normalize the array size to pow of 2. 
+\begin{DoxyParams}{Parameters}
+{\em n} & the size of input array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{MAT_8c_ab70cc76fff672f86c37003cb307eb4d3}\label{MAT_8c_ab70cc76fff672f86c37003cb307eb4d3}} 
+\index{M\+A\+T.\+c@{M\+A\+T.\+c}!read\+\_\+inputfile@{read\+\_\+inputfile}}
+\index{read\+\_\+inputfile@{read\+\_\+inputfile}!M\+A\+T.\+c@{M\+A\+T.\+c}}
+\subsubsection{\texorpdfstring{read\+\_\+inputfile()}{read\_inputfile()}}
+{\footnotesize\ttfamily void read\+\_\+inputfile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method will be used to read the array from input.\+txt file \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{MAT_8c_a0524f1637ce8ca345bea43c1ee2a6d1d}\label{MAT_8c_a0524f1637ce8ca345bea43c1ee2a6d1d}} 
+\index{M\+A\+T.\+c@{M\+A\+T.\+c}!same\+\_\+bits@{same\+\_\+bits}}
+\index{same\+\_\+bits@{same\+\_\+bits}!M\+A\+T.\+c@{M\+A\+T.\+c}}
+\subsubsection{\texorpdfstring{same\+\_\+bits()}{same\_bits()}}
+{\footnotesize\ttfamily bool same\+\_\+bits (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2 }\end{DoxyParamCaption})}
+
+This method will be used to check if subarray has same bits \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/2019 
+\end{DoxyDate}

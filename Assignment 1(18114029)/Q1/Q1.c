@@ -41,7 +41,7 @@ struct Node Loader[13];
 
 /**
 * This method will be used to load data from csv file
-* @author harshit Verma
+* @author Harshit Verma
 * @date 7/24/2019
 */
 void Load_details() {

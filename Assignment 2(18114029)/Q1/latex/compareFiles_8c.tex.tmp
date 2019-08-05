@@ -1,0 +1,53 @@
+\hypertarget{compareFiles_8c}{}\section{compare\+Files.\+c File Reference}
+\label{compareFiles_8c}\index{compare\+Files.\+c@{compare\+Files.\+c}}
+
+
+Compare the plaintext and decrypted text.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for compare\+Files.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{compareFiles_8c_ad1d0618247f01bfc24c92912798c6bd9}{read\+\_\+file} (char filename\mbox{[}$\,$\mbox{]}, char $\ast$output)
+\item 
+\mbox{\Hypertarget{compareFiles_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{compareFiles_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{compareFiles_8c_a7d479fb422926519a037ee354b197738}\label{compareFiles_8c_a7d479fb422926519a037ee354b197738}} 
+double {\bfseries T\+O\+T\+A\+L\+\_\+\+T\+I\+ME} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Compare the plaintext and decrypted text. 
+
+\begin{DoxyAuthor}{Author}
+Harshit Verma
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/19 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{compareFiles_8c_ad1d0618247f01bfc24c92912798c6bd9}\label{compareFiles_8c_ad1d0618247f01bfc24c92912798c6bd9}} 
+\index{compare\+Files.\+c@{compare\+Files.\+c}!read\+\_\+file@{read\+\_\+file}}
+\index{read\+\_\+file@{read\+\_\+file}!compare\+Files.\+c@{compare\+Files.\+c}}
+\subsubsection{\texorpdfstring{read\+\_\+file()}{read\_file()}}
+{\footnotesize\ttfamily void read\+\_\+file (\begin{DoxyParamCaption}\item[{char}]{filename\mbox{[}$\,$\mbox{]},  }\item[{char $\ast$}]{output }\end{DoxyParamCaption})}
+
+This method will be used to decrypted text and plaintext from their respective files \begin{DoxyAuthor}{Author}
+Harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/2019 
+\end{DoxyDate}

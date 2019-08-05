@@ -1,0 +1,89 @@
+\hypertarget{transpose_8c}{}\section{transpose.\+c File Reference}
+\label{transpose_8c}\index{transpose.\+c@{transpose.\+c}}
+
+
+Encrypts the plaintext.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for transpose.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structkey}{key}
+\begin{DoxyCompactList}\small\item\em Encryption Key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{transpose_8c_a3e2bb97890b4277d4c59c7e5986ff4a3}{read\+\_\+file} (char filename\mbox{[}$\,$\mbox{]}, char $\ast$output, struct \hyperlink{structkey}{key} Key)
+\item 
+void \hyperlink{transpose_8c_a8b92e1cd18a643a00e49941a45d70d31}{write\+\_\+file} (char $\ast$encrypted\+\_\+text, struct \hyperlink{structkey}{key} Key)
+\item 
+void \hyperlink{transpose_8c_a499f7ab06501b06c26c2ce7c7856909d}{Transpose} (struct \hyperlink{structkey}{key} Key, char $\ast$text, char $\ast$encrypted\+\_\+text)
+\item 
+\mbox{\Hypertarget{transpose_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{transpose_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{transpose_8c_af1d3cff2e4538e23400e260bae3dadad}\label{transpose_8c_af1d3cff2e4538e23400e260bae3dadad}} 
+int {\bfseries row} = 0
+\item 
+\mbox{\Hypertarget{transpose_8c_a7d479fb422926519a037ee354b197738}\label{transpose_8c_a7d479fb422926519a037ee354b197738}} 
+double {\bfseries T\+O\+T\+A\+L\+\_\+\+T\+I\+ME} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Encrypts the plaintext. 
+
+\begin{DoxyAuthor}{Author}
+Harshit Verma
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/19 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{transpose_8c_a3e2bb97890b4277d4c59c7e5986ff4a3}\label{transpose_8c_a3e2bb97890b4277d4c59c7e5986ff4a3}} 
+\index{transpose.\+c@{transpose.\+c}!read\+\_\+file@{read\+\_\+file}}
+\index{read\+\_\+file@{read\+\_\+file}!transpose.\+c@{transpose.\+c}}
+\subsubsection{\texorpdfstring{read\+\_\+file()}{read\_file()}}
+{\footnotesize\ttfamily void read\+\_\+file (\begin{DoxyParamCaption}\item[{char}]{filename\mbox{[}$\,$\mbox{]},  }\item[{char $\ast$}]{output,  }\item[{struct \hyperlink{structkey}{key}}]{Key }\end{DoxyParamCaption})}
+
+This method will be used to read text from inputfile,txt \begin{DoxyAuthor}{Author}
+Harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{transpose_8c_a499f7ab06501b06c26c2ce7c7856909d}\label{transpose_8c_a499f7ab06501b06c26c2ce7c7856909d}} 
+\index{transpose.\+c@{transpose.\+c}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!transpose.\+c@{transpose.\+c}}
+\subsubsection{\texorpdfstring{Transpose()}{Transpose()}}
+{\footnotesize\ttfamily void Transpose (\begin{DoxyParamCaption}\item[{struct \hyperlink{structkey}{key}}]{Key,  }\item[{char $\ast$}]{text,  }\item[{char $\ast$}]{encrypted\+\_\+text }\end{DoxyParamCaption})}
+
+This method will be used to encrypt the plaintext \begin{DoxyAuthor}{Author}
+Harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{transpose_8c_a8b92e1cd18a643a00e49941a45d70d31}\label{transpose_8c_a8b92e1cd18a643a00e49941a45d70d31}} 
+\index{transpose.\+c@{transpose.\+c}!write\+\_\+file@{write\+\_\+file}}
+\index{write\+\_\+file@{write\+\_\+file}!transpose.\+c@{transpose.\+c}}
+\subsubsection{\texorpdfstring{write\+\_\+file()}{write\_file()}}
+{\footnotesize\ttfamily void write\+\_\+file (\begin{DoxyParamCaption}\item[{char $\ast$}]{encrypted\+\_\+text,  }\item[{struct \hyperlink{structkey}{key}}]{Key }\end{DoxyParamCaption})}
+
+This method will be used to write the encrypted text to outputfile.\+txt \begin{DoxyAuthor}{Author}
+Harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/5/2019 
+\end{DoxyDate}

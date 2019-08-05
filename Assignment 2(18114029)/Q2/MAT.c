@@ -1,16 +1,17 @@
 /**
-* @file Q2.c
+* @file MAT.c
 * @brief Medial axis transformation (MAT) 
 *
 * @author Harshit Verma
 *
 * @date 08/5/19
 */
-#include<stdio.h>
+#include <stdio.h>
 #include <stdlib.h> 
 #include <math.h>
 #include <stdbool.h> 
-#include<string.h>
+#include <string.h>
+#include <time.h>
 
 //! Quadtree node
 struct node {
@@ -21,6 +22,7 @@ struct node {
 
 int N, n, **a, **msa, top = 0;
 struct node quadtree[6000];
+double TOTAL_TIME = 0;
 
 /**
 * This method will be used to get value of input array from input.txt file
@@ -28,6 +30,8 @@ struct node quadtree[6000];
 * @date 08/5/2019
 */
 void initialize_n() {
+    __clock_t 	start_t, end_t;
+	start_t = clock();
 
     FILE *fp = fopen("input.txt", "r");
     
@@ -40,6 +44,9 @@ void initialize_n() {
     }
 
     n = sqrt(x);
+
+    end_t = clock();
+    TOTAL_TIME += (double)(end_t - start_t) / CLOCKS_PER_SEC;
 }
 
 /**
@@ -48,6 +55,8 @@ void initialize_n() {
 * @date 08/5/2019
 */
 void read_inputfile() {
+    __clock_t 	start_t, end_t;
+	start_t = clock();
 
     FILE *fp = fopen("input.txt", "r");
     
@@ -62,6 +71,9 @@ void read_inputfile() {
         j++;
         if(j == n+1) { j = 1; i++;}
     }
+
+    end_t = clock();
+    TOTAL_TIME += (double)(end_t - start_t) / CLOCKS_PER_SEC;
 }
 
 /**
@@ -71,8 +83,13 @@ void read_inputfile() {
 * @date 08/5/2019
 */
 void Preprocess(int n) {
+    __clock_t 	start_t, end_t;
+	start_t = clock();
 
     N = pow(2, ceil(log2(n)));
+
+    end_t = clock();
+    TOTAL_TIME += (double)(end_t - start_t) / CLOCKS_PER_SEC;
 }
 
 /**
@@ -81,12 +98,17 @@ void Preprocess(int n) {
 * @date 08/5/2019
 */
 bool same_bits(int x1, int y1, int x2, int y2) {
+    __clock_t 	start_t, end_t;
+	start_t = clock();
 
     int bit = a[x1][y1];
 
     for(int i = x1; i <= x2; i++)
         for(int j = y1; j <= y2; j++) 
             if(a[i][j] != bit) return false;
+
+    end_t = clock();
+    TOTAL_TIME += (double)(end_t - start_t) / CLOCKS_PER_SEC;
 
     return true;
 }
@@ -97,10 +119,15 @@ bool same_bits(int x1, int y1, int x2, int y2) {
 * @date 08/5/2019
 */
 void fill_msa(int x1, int y1, int x2, int y2, int node) {
+    __clock_t 	start_t, end_t;
+	start_t = clock();
 
     for(int i = x1; i <= x2; i++)
         for(int j = y1; j <= y2; j++)
             msa[i][j] = node;
+
+    end_t = clock();
+    TOTAL_TIME += (double)(end_t - start_t) / CLOCKS_PER_SEC;        
 }
 
 /**
@@ -109,7 +136,9 @@ void fill_msa(int x1, int y1, int x2, int y2, int node) {
 * @date 08/5/2019
 */
 int MAT(int x1, int y1, int x2, int y2, int node, int level) {
-    
+     __clock_t 	start_t, end_t;
+	start_t = clock();
+
     if(same_bits(x1, y1, x2, y2)) { 
         fill_msa(x1, y1, x2, y2, node);
         
@@ -125,6 +154,11 @@ int MAT(int x1, int y1, int x2, int y2, int node, int level) {
     node = MAT(x1, (y1 + y2) / 2 + 1, (x1 + x2) / 2, y2, node, level+1);
     node = MAT((x1 + x2) / 2 + 1, y1, x2, (y1 + y2) / 2, node, level+1);
     node = MAT((x1 + x2) / 2 + 1, (y1 + y2) / 2 + 1, x2, y2, node, level+1);
+
+    end_t = clock();
+    TOTAL_TIME += (double)(end_t - start_t) / CLOCKS_PER_SEC;
+    
+    return node;
 }
 
 int main() {
@@ -183,6 +217,7 @@ int main() {
             }
 
             case 3 : {
+                printf("CPU Time : %f\n", TOTAL_TIME);      
                 printf("Program terminating..\n");
                 return 0;
             }
