@@ -63,13 +63,14 @@ void read_inputfile() {
     if(fp == NULL) {printf("No input.txt file found!\n"); return;}
 
     char c; 
-    int i = 1, j = 1;
+    int i = N-n+1, j = N-n+1;
     while( (c = fgetc(fp)) != EOF) {
         if(c == ' ' || c == '\n') continue;
         a[i][j] = c - '0';
         
         j++;
-        if(j == n+1) { j = 1; i++;}
+        if(j == N+1) { j = N-n+1; i++;}
+        if(i > N) break;
     }
 
     end_t = clock();
@@ -167,6 +168,7 @@ int main() {
 
     Preprocess(n);
 
+   //! Intialising the arrays
     a = (int **) malloc ((N+1) * sizeof(int*));
     for(int i = 0; i < N+1; i++)
         a[i] = (int *) malloc((N+1) * sizeof(int));
@@ -174,12 +176,11 @@ int main() {
     msa = (int **) malloc ((N+1) * sizeof(int*));
     for(int i = 0; i < N+1; i++)
         msa[i] = (int *) malloc((N+1) * sizeof(int));
-
+	
     read_inputfile();
 
     int x = MAT(1, 1, N, N, 1, 0);
-
-
+	
     while(1) {
         
         printf("------- Medial axis transformation (MAT) -------\n");
@@ -200,7 +201,10 @@ int main() {
                 putchar('\n');
                 for(int i = 1; i <= N; i++) {
                     for(int j = 1; j <= N; j++)
-                        printf("%d ", msa[i][j]);
+                        if(msa[i][j] < 10)    
+                            printf("%d  ", msa[i][j]);
+                        else 
+                            printf("%d ", msa[i][j]);    
                     putchar('\n');
                 }
                 putchar('\n');
@@ -226,4 +230,5 @@ int main() {
             }
         }    
     }
+    
 }
