@@ -1,6 +1,20 @@
+/**
+* @file Q2.cpp
+* @brief XOR-DP problem 
+*
+* @author Harshit Verma
+*
+* @date 08/17/19
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 
+/**
+* This class is used as node of Linked List
+* @author harshit Verma
+* @date 08/17/2019
+*/
 template<class t>
 class Node{
 
@@ -14,6 +28,11 @@ class Node{
         }
 };
 
+/**
+* This class is used as Linked List
+* @author harshit Verma
+* @date 08/17/2019
+*/
 template<class t>
 class LinkedList {
 
@@ -28,6 +47,11 @@ class LinkedList {
             length = 0;
         } 
 
+        /**
+        * This funtion will be used to insert node in linked list
+        * @author harshit Verma
+        * @date 08/17/2019
+        */
         void insert(t x) {
 
             Node<t>* temp = new Node<t>(x);
@@ -42,7 +66,12 @@ class LinkedList {
 
             length++;
         };   
-
+        
+        /**
+        * This funtion will be used to get element at jth index
+        * @author harshit Verma
+        * @date 08/17/2019
+        */
         t getelement(int j) {
             int index = 0;
             Node<t>* temp = head;
@@ -57,6 +86,11 @@ class LinkedList {
             return tail->data;
         }
 
+        /**
+        * This funtion will be used to set data at jth index 
+        * @author harshit Verma
+        * @date 08/17/2019
+        */
         void setelement(int j, t x) {
             int index = 0;
             Node<t>* temp = head;
@@ -73,6 +107,11 @@ class LinkedList {
             tail->data = x;
         }
 
+        /**
+        * This funtion will be used to print linked list
+        * @author harshit Verma
+        * @date 08/17/2019
+        */
         void printlist() {
             Node<t>* temp = head;
             while(temp->next != NULL) {
@@ -83,6 +122,11 @@ class LinkedList {
         }
 };
 
+/**
+* This funtion will be used to initialize the dp linked list
+* @author harshit Verma
+* @date 08/17/2019
+*/
 void init(LinkedList<LinkedList<int>> *a, int n, LinkedList<int> b, LinkedList<pair<int, int>>* pre_ans) {
 
     for(int i = 0; i < n; i++) {

@@ -1,0 +1,59 @@
+\hypertarget{Q1_8cpp}{}\section{Q1.\+cpp File Reference}
+\label{Q1_8cpp}\index{Q1.\+cpp@{Q1.\+cpp}}
+
+
+B\+S\+T/\+Red-\/\+Black-\/\+Tree/\+A\+VL.  
+
+
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+Include dependency graph for Q1.\+cpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classBSTnode}{B\+S\+Tnode}
+\item 
+class \hyperlink{classRBTnode}{R\+B\+Tnode}
+\item 
+class \hyperlink{classBST}{B\+ST}
+\item 
+class \hyperlink{classRedBlackTree}{Red\+Black\+Tree}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Q1_8cpp_a21ba6f152e05206dcfb076dd56db63f7}\label{Q1_8cpp_a21ba6f152e05206dcfb076dd56db63f7}} 
+{\footnotesize template$<$class t $>$ }\\void {\bfseries Print\+All\+Paths} (t $\ast$root)
+\item 
+\mbox{\Hypertarget{Q1_8cpp_a431a1d87942c332c4e61eaccc00bd82c}\label{Q1_8cpp_a431a1d87942c332c4e61eaccc00bd82c}} 
+{\footnotesize template$<$class t $>$ }\\void {\bfseries gotoleaf} (t $\ast$root, vector$<$ int $>$ v)
+\item 
+\mbox{\Hypertarget{Q1_8cpp_a14f3446fa7cd283042cc25c85cb3cfb2}\label{Q1_8cpp_a14f3446fa7cd283042cc25c85cb3cfb2}} 
+void {\bfseries Makearr} (\hyperlink{classBSTnode}{B\+S\+Tnode} $\ast$root)
+\item 
+\mbox{\Hypertarget{Q1_8cpp_a8f2174cadd40bf9e17ea5f52c782a428}\label{Q1_8cpp_a8f2174cadd40bf9e17ea5f52c782a428}} 
+\hyperlink{classBSTnode}{B\+S\+Tnode} $\ast$ {\bfseries avlgen} (\hyperlink{classBSTnode}{B\+S\+Tnode} $\ast$root, int start, int mid, int end)
+\item 
+\mbox{\Hypertarget{Q1_8cpp_ab8cfd8845b46a9298d6c7e3715c97725}\label{Q1_8cpp_ab8cfd8845b46a9298d6c7e3715c97725}} 
+\hyperlink{classBSTnode}{B\+S\+Tnode} $\ast$ {\bfseries B\+S\+Tto\+A\+VL} (\hyperlink{classBSTnode}{B\+S\+Tnode} $\ast$bstroot, \hyperlink{classBSTnode}{B\+S\+Tnode} $\ast$avlroot)
+\item 
+\mbox{\Hypertarget{Q1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Q1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Q1_8cpp_a9d75c9ca70fceb20bd3118cca57a7a0a}\label{Q1_8cpp_a9d75c9ca70fceb20bd3118cca57a7a0a}} 
+vector$<$ int $>$ {\bfseries v}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+B\+S\+T/\+Red-\/\+Black-\/\+Tree/\+A\+VL. 
+
+\begin{DoxyAuthor}{Author}
+Harshit Verma
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/17/19 
+\end{DoxyDate}

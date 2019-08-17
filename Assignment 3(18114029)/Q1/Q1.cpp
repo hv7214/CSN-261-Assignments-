@@ -1,6 +1,20 @@
+/**
+* @file Q1.cpp
+* @brief BST/Red-Black-Tree/AVL 
+*
+* @author Harshit Verma
+*
+* @date 08/17/19
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 
+/**
+* This class will be used for Binary Search Tree Node
+* @author harshit Verma
+* @date 08/17/2019
+*/
 class BSTnode {
 
     public :
@@ -19,31 +33,47 @@ class BSTnode {
         }    
 };
 
+/**
+* This class will be used for Red Black Tree Node
+* @author harshit Verma
+* @date 08/17/2019
+*/
 class RBTnode {
     public :
         int data; 
         int color; 
         int balancefactor;
         int h;
-        RBTnode *left, *right, *parent; 
+        RBTnode *left, *right, *par; 
     
         RBTnode(int data) 
         { 
         this->data = data; 
-        left = right = parent = NULL; 
+        left = right = par = NULL; 
         this->color = 1; 
         }   
 };
 
+/**
+* This class will be used for Binary search tree
+* @author harshit Verma
+* @date 08/17/2019
+*/
 class BST {
 
     public:
         BSTnode *root;
 
+        //!Consructor
         BST() {
             root = NULL;
         }
 
+        /**
+        * This funtion will be used to insert node in bst
+        * @author harshit Verma
+        * @date 08/17/2019
+        */
         BSTnode* insert(BSTnode *root, int x) {
             
             if(root == NULL) {
@@ -73,6 +103,11 @@ class BST {
             return root;     
         };
 
+        /**
+        * This funtion will be used for inorder printing of tree
+        * @author harshit Verma
+        * @date 08/17/2019
+        */
         void inorderprint(BSTnode *root) {
 
             if(root == NULL) return;
@@ -82,6 +117,11 @@ class BST {
             inorderprint(root->right);    
         }
 
+        /**
+        * This funtion will be used for Level wise identation printing of tree
+        * @author harshit Verma
+        * @date 08/17/2019
+        */
         void levelorderprint(BSTnode *root, int spaces) {
             
             if(root == NULL) return;
@@ -98,14 +138,26 @@ class BST {
         } 
 };
 
+/*
+* This class will be used for Red Black Tree
+* @author harshit Verma
+* @date 08/17/2019
+*/ 
 class RedBlackTree{
 
     public:
         RBTnode *root;
+
+        //!Constuctor
         RedBlackTree() {
             root = NULL;
         }
 
+        /*
+        * This function will be used for BST insert for red black tree
+        * @author harshit Verma
+        * @date 08/17/2019
+        */ 
         RBTnode* BSTinsert(RBTnode *root, RBTnode* temp) {
 
             if (root == NULL) 
@@ -114,17 +166,22 @@ class RedBlackTree{
             if (temp->data <= root->data) 
             { 
                 root->left  = BSTinsert(root->left, temp); 
-                root->left->parent = root; 
+                root->left->par = root; 
             } 
             else if (temp->data > root->data) 
             { 
                 root->right = BSTinsert(root->right, temp); 
-                root->right->parent = root; 
+                root->right->par = root; 
             } 
         
             return root; 
         };
 
+        /*
+        * This function is used to calculate balance factor of nodes after every insertion
+        * @author harshit Verma
+        * @date 08/17/2019
+        */
         void calcbalancefactor(RBTnode *root) {
             
             if(root == NULL) return; 
@@ -138,116 +195,131 @@ class RedBlackTree{
             root->balancefactor = abs(lh - rh);
         };
 
-        void rotateRight(RBTnode *&root, RBTnode *&pt) 
+        /*
+        * This function used in balancing the tree by rotation of tree around a node in right direction
+        * @author harshit Verma
+        * @date 08/17/2019
+        */
+        void rotateRight(RBTnode *&root, RBTnode *&temp) 
         { 
-            RBTnode *pt_left = pt->left; 
+            RBTnode *temp_left = temp->left; 
         
-            pt->left = pt_left->right; 
+            temp->left = temp_left->right; 
         
-            if (pt->left != NULL) 
-                pt->left->parent = pt; 
+            if (temp->left != NULL) 
+                temp->left->par = temp; 
         
-            pt_left->parent = pt->parent; 
+            temp_left->par = temp->par; 
         
-            if (pt->parent == NULL) 
-                root = pt_left; 
+            if (temp->par == NULL) 
+                root = temp_left; 
         
-            else if (pt == pt->parent->left) 
-                pt->parent->left = pt_left; 
+            else if (temp == temp->par->left) 
+                temp->par->left = temp_left; 
         
             else
-                pt->parent->right = pt_left; 
+                temp->par->right = temp_left; 
         
-            pt_left->right = pt; 
-            pt->parent = pt_left; 
+            temp_left->right = temp; 
+            temp->par = temp_left; 
         };
         
-        void rotateLeft(RBTnode *&root, RBTnode *&pt) 
+        /*
+        * This function used in balancing the tree by rotation of tree around a node in left direction
+        * @author harshit Verma
+        * @date 08/17/2019
+        */
+        void rotateLeft(RBTnode *&root, RBTnode *&temp) 
         { 
-            RBTnode *pt_right = pt->right; 
+            RBTnode *temp_right = temp->right; 
         
-            pt->right = pt_right->left; 
+            temp->right = temp_right->left; 
         
-            if (pt->right != NULL) 
-                pt->right->parent = pt; 
+            if (temp->right != NULL) 
+                temp->right->par = temp; 
         
-            pt_right->parent = pt->parent; 
+            temp_right->par = temp->par; 
         
-            if (pt->parent == NULL) 
-                root = pt_right; 
+            if (temp->par == NULL) 
+                root = temp_right; 
         
-            else if (pt == pt->parent->left) 
-                pt->parent->left = pt_right; 
+            else if (temp == temp->par->left) 
+                temp->par->left = temp_right; 
         
             else
-                pt->parent->right = pt_right; 
+                temp->par->right = temp_right; 
         
-            pt_right->left = pt; 
-            pt->parent = pt_right; 
+            temp_right->left = temp; 
+            temp->par = temp_right; 
         };
 
+        /*
+        * This function is used to fix any voilations of rules of Red Black Tree
+        * @author harshit Verma
+        * @date 08/17/2019
+        */
         void fix(RBTnode *&root, RBTnode* &temp) {
 
-                RBTnode *parent_pt = NULL; 
-                RBTnode *grand_parent_pt = NULL; 
+                RBTnode *par_temp = NULL; 
+                RBTnode *grand_par_temp = NULL; 
   
                 while ((temp != root) && (temp->color != 0) && 
-                    (temp->parent->color == 1)) 
+                    (temp->par->color == 1)) 
                 { 
             
-                    parent_pt = temp->parent; 
-                    grand_parent_pt = temp->parent->parent; 
+                    par_temp = temp->par; 
+                    grand_par_temp = temp->par->par; 
             
-                    if (parent_pt == grand_parent_pt->left) 
+                    if (par_temp == grand_par_temp->left) 
                     { 
             
-                        RBTnode *uncle_pt = grand_parent_pt->right; 
+                        RBTnode *unc_temp = grand_par_temp->right; 
             
-                        if (uncle_pt != NULL && uncle_pt->color == 1) 
+                        if (unc_temp != NULL && unc_temp->color == 1) 
                         { 
-                            grand_parent_pt->color = 1; 
-                            parent_pt->color = 0; 
-                            uncle_pt->color = 0; 
-                            temp = grand_parent_pt; 
+                            grand_par_temp->color = 1; 
+                            par_temp->color = 0; 
+                            unc_temp->color = 0; 
+                            temp = grand_par_temp; 
                         } 
             
                         else { 
-                            if (temp == parent_pt->right) 
+                            if (temp == par_temp->right) 
                             { 
-                                rotateLeft(root, parent_pt); 
-                                temp = parent_pt; 
-                                parent_pt = temp->parent; 
+                                rotateLeft(root, par_temp); 
+                                temp = par_temp; 
+                                par_temp = temp->par; 
                             } 
             
-                            rotateRight(root, grand_parent_pt); 
-                            swap(parent_pt->color, grand_parent_pt->color); 
-                            temp = parent_pt; 
+                            rotateRight(root, grand_par_temp); 
+                            swap(par_temp->color, grand_par_temp->color); 
+                            temp = par_temp; 
                         } 
                     } 
 
                     else
                     { 
-                        RBTnode *uncle_pt = grand_parent_pt->left; 
+                        RBTnode *unc_temp = grand_par_temp->left; 
             
-                        if ((uncle_pt != NULL) && (uncle_pt->color == 1)) 
+                        if ((unc_temp != NULL) && (unc_temp->color == 1)) 
                         { 
-                            grand_parent_pt->color = 1; 
-                            parent_pt->color = 0; 
-                            uncle_pt->color = 0; 
-                            temp = grand_parent_pt; 
+                            grand_par_temp->color = 1; 
+                            par_temp->color = 0; 
+                            unc_temp->color = 0; 
+                            temp = grand_par_temp; 
                         } 
                         else
                         { 
-                            if (temp == parent_pt->left) 
+                            if (temp == par_temp->left) 
                             { 
-                                rotateRight(root, parent_pt); 
-                                temp = parent_pt; 
-                                parent_pt = temp->parent; 
+                                rotateRight(root, par_temp); 
+                                temp = par_temp; 
+                                par_temp = temp->par; 
                             } 
             
-                            rotateLeft(root, grand_parent_pt); 
-                            swap(parent_pt->color, grand_parent_pt->color); 
-                            temp = parent_pt; 
+                            rotateLeft(root, grand_par_temp); 
+                            swap(par_temp->color, grand_par_temp->color); 
+                            temp = par_temp; 
                         } 
                     } 
                 } 
@@ -255,17 +327,27 @@ class RedBlackTree{
                         
         };
 
+        /*
+        * This function is used to insert node in RBT
+        * @author harshit Verma
+        * @date 08/17/2019
+        */
         void insert(const int &data) 
             { 
-                RBTnode *pt = new RBTnode(data); 
+                RBTnode *temp = new RBTnode(data); 
             
-                root = BSTinsert(root, pt); 
+                root = BSTinsert(root, temp); 
             
-                fix(root, pt); 
+                fix(root, temp); 
 
                 calcbalancefactor(root);
             }; 
-
+        
+        /*
+        * This function is used to inorder print of RBT
+        * @author harshit Verma
+        * @date 08/17/2019
+        */
         void inorderprint(RBTnode *root) 
         { 
             if (root == NULL) 
@@ -276,6 +358,11 @@ class RedBlackTree{
             inorderprint(root->right); 
         };    
 
+        /*
+        * This function is used to level wise identation print of RBT
+        * @author harshit Verma
+        * @date 08/17/2019
+        */
         void levelorderprint(RBTnode *root, int spaces) {
             
             if(root == NULL) return;
@@ -293,6 +380,11 @@ class RedBlackTree{
         }; 
 };
 
+/*
+* template function to print all paths to leaf in a tree
+* @author harshit Verma
+* @date 08/17/2019
+*/
 template<class t>
 void PrintAllPaths(t *root) {
 
@@ -303,6 +395,11 @@ void PrintAllPaths(t *root) {
     PrintAllPaths(root->right);
 }
 
+/*
+* Helper functio for PrintAllPaths function
+* @author harshit Verma
+* @date 08/17/2019
+*/
 template<class t> 
 void gotoleaf(t *root, vector<int> v) {
 
@@ -324,6 +421,12 @@ void gotoleaf(t *root, vector<int> v) {
 }
 
 vector<int> v;
+
+/*
+* Helper function for BSTtoAVL
+* @author harshit Verma
+* @date 08/17/2019
+*/
 void Makearr(BSTnode *root) {
 
     if(root == NULL) return;
@@ -333,6 +436,11 @@ void Makearr(BSTnode *root) {
     Makearr(root->right);
 }
 
+/*
+* Helper function for avlgen
+* @author harshit Verma
+* @date 08/17/2019
+*/
 BSTnode* avlgen(BSTnode*root, int start, int mid, int end) {
 
     if(start > end) return NULL;
@@ -347,6 +455,11 @@ BSTnode* avlgen(BSTnode*root, int start, int mid, int end) {
     return root;
 }
 
+/*
+* This function is used to convert to BST to AVL
+* @author harshit Verma
+* @date 08/17/2019
+*/
 BSTnode* BSTtoAVL(BSTnode *bstroot, BSTnode *avlroot) {
 
     Makearr(bstroot);
@@ -374,21 +487,21 @@ int main() {
         cout << "5. Level-wise indentation print of BST/AVL/Red-Black-Tree" << "\n"; 
         cout << "6. Exit" << "\n\n";
 
-        int option; cin >> option;
+        int otempion; cin >> otempion;
 
-        switch(option) {
+        switch(otempion) {
 
             case 1: {
 
                 cout << "1. Red-Black-Tree" << "\n";
                 cout << "2. BST" << "\n";
 
-                int suboption; cin >> suboption;
+                int subotempion; cin >> subotempion;
                 
                 cout << "Enter data" << "\n";
                 int x; cin >> x;
 
-                switch(suboption) {
+                switch(subotempion) {
                     case 1 : 
                         rbt.insert(x);
                         break;
@@ -415,9 +528,9 @@ int main() {
                 cout << "2. BST" << "\n";
                 cout << "3. AVL" << "\n";
 
-                int suboption; cin >> suboption;
+                int subotempion; cin >> subotempion;
 
-                switch(suboption) {
+                switch(subotempion) {
                     case 1:
                         cout << "Inorder:";
                         rbt.inorderprint(rbt.root);
@@ -446,9 +559,9 @@ int main() {
                 cout << "2. BST" << "\n";
                 cout << "3. AVL" << "\n";
 
-                int suboption; cin >> suboption;
+                int subotempion; cin >> subotempion;
 
-                switch(suboption) {
+                switch(subotempion) {
 
                     case 1:
                         cout << "Paths to leaf:" << "\n";
@@ -474,9 +587,9 @@ int main() {
                 cout << "2. BST" << "\n";
                 cout << "3. AVL" << "\n";
 
-                int suboption; cin >> suboption;
+                int subotempion; cin >> subotempion;
 
-                switch(suboption) {
+                switch(subotempion) {
                     case 1:
                         cout << "Level-indentation print:" << "\n";
                         rbt.levelorderprint(rbt.root, 0);

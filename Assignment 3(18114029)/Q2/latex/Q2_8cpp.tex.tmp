@@ -1,0 +1,57 @@
+\hypertarget{Q2_8cpp}{}\section{Q2.\+cpp File Reference}
+\label{Q2_8cpp}\index{Q2.\+cpp@{Q2.\+cpp}}
+
+
+X\+O\+R-\/\+DP problem.  
+
+
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+Include dependency graph for Q2.\+cpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classNode}{Node$<$ t $>$}
+\item 
+class \hyperlink{classLinkedList}{Linked\+List$<$ t $>$}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Q2_8cpp_a537f43ea13b4483880870266df79dc9b}{init} (\hyperlink{classLinkedList}{Linked\+List}$<$ \hyperlink{classLinkedList}{Linked\+List}$<$ int $>$$>$ $\ast$a, int n, \hyperlink{classLinkedList}{Linked\+List}$<$ int $>$ b, \hyperlink{classLinkedList}{Linked\+List}$<$ pair$<$ int, int $>$$>$ $\ast$pre\+\_\+ans)
+\item 
+int \hyperlink{Q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+X\+O\+R-\/\+DP problem. 
+
+\begin{DoxyAuthor}{Author}
+Harshit Verma
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/17/19 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{Q2_8cpp_a537f43ea13b4483880870266df79dc9b}\label{Q2_8cpp_a537f43ea13b4483880870266df79dc9b}} 
+\index{Q2.\+cpp@{Q2.\+cpp}!init@{init}}
+\index{init@{init}!Q2.\+cpp@{Q2.\+cpp}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void init (\begin{DoxyParamCaption}\item[{\hyperlink{classLinkedList}{Linked\+List}$<$ \hyperlink{classLinkedList}{Linked\+List}$<$ int $>$$>$ $\ast$}]{a,  }\item[{int}]{n,  }\item[{\hyperlink{classLinkedList}{Linked\+List}$<$ int $>$}]{b,  }\item[{\hyperlink{classLinkedList}{Linked\+List}$<$ pair$<$ int, int $>$$>$ $\ast$}]{pre\+\_\+ans }\end{DoxyParamCaption})}
+
+This funtion will be used to initialize the dp linked list \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/17/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Q2.\+cpp@{Q2.\+cpp}!main@{main}}
+\index{main@{main}!Q2.\+cpp@{Q2.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initializing dp 2d linkedlist array 
