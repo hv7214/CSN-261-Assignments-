@@ -83,17 +83,19 @@ class LinkedList {
         }
 };
 
-void init(LinkedList<int> *a, int n, LinkedList<int> b, LinkedList<pair<int, int>>* pre_ans) {
+void init(LinkedList<LinkedList<int>> *a, int n, LinkedList<int> b, LinkedList<pair<int, int>>* pre_ans) {
 
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++) {
+        LinkedList<int> temp;
         for(int j = 0; j < n; j++) {
-            a[i].insert(0);
+            temp.insert(0);
         }
-
-    a[0].setelement(0, b.getelement(0));
+        (*a).insert(temp);
+    }
+    (*a).getelement(0).setelement(0, b.getelement(0));
     for(int j = 1; j < n; j++) {
-        a[0].setelement(j, a[0].getelement(j-1) ^ b.getelement(j));    
-        if(a[0].getelement(j) == 0) {
+        (*a).getelement(0).setelement(j, (*a).getelement(0).getelement(j-1) ^ b.getelement(j));    
+        if((*a).getelement(0).getelement(j) == 0) {
                 (*pre_ans).insert(make_pair(1, j+1));
             }
     }
@@ -112,16 +114,15 @@ int main() {
         list.insert(data);
     }    
 
-    LinkedList<int> dp[n];
+    LinkedList<LinkedList<int>> dp;
     //!Initializing dp 2d linkedlist array
-    init(dp, n, list, &pre_ans);        
+    init(&dp, n, list, &pre_ans);        
     
     for(int i = 1; i < n; i++)
         for(int j = i; j < n; j++) {
-            dp[i].setelement(j, dp[0].getelement(i-1) ^ dp[0].getelement(j));
+            dp.getelement(i).setelement(j, dp.getelement(0).getelement(i-1) ^ dp.getelement(0).getelement(j));
             
-            // cout << dp[i].getelement(j) << " ";
-            if(dp[i].getelement(j) == 0) {
+            if(dp.getelement(i).getelement(j) == 0) {
                 pre_ans.insert(make_pair(i+1, j+1));
             }
         }
@@ -134,6 +135,6 @@ int main() {
         for(int J = I+1; J <= K; J++) 
             cout << "(" << I << "," << J << "," << K << ")" << "\n";
     }    
-    
+
     return 0;
 }
