@@ -396,7 +396,7 @@ int main() {
                         bst.root = bst.insert(bst.root, x);
                         break;
                     default:
-                        cout << "Wrong input";        
+                        cout << "Wrong input\n";        
                 }
                 break;
             }
