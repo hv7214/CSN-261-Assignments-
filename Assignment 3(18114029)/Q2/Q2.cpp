@@ -152,6 +152,7 @@ int main() {
 
     LinkedList<int> list;
     LinkedList<pair<int, int>> pre_ans;
+    LinkedList<pair<int, pair<int, int>>> ans;
 
     for(int i = 0; i < n; i++) {
         int data; cin >> data;
@@ -176,9 +177,21 @@ int main() {
         auto p = pre_ans.getelement(i);
         int I = p.first, K = p.second;
 
-        for(int J = I+1; J <= K; J++) 
-            cout << "(" << I << "," << J << "," << K << ")" << "\n";
-    }    
+        for(int J = I+1; J <= K; J++) {
+            ans.insert(make_pair(I, make_pair(J, K)));
+        }
+    }
 
+    cout << ans.length << "\n";     
+
+    for(int i = 0; i < ans.length; i++) {
+
+        auto p = ans.getelement(i);
+        int I = p.first;
+        int J = p.second.first;
+        int K = p.second.second;
+
+        cout << "(" << I << "," << J << "," << K << ")" << "\n";
+    }
     return 0;
 }

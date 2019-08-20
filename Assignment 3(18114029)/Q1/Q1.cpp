@@ -96,7 +96,7 @@ class BST {
                     root->h = max(root->left->h, root->right->h) + 1;
                     root->balancefactor = abs(root->left->h - root->right->h);
                 } else {
-                    root->h = root->left->h;
+                    root->h = root->left->h + 1;
                     root->balancefactor = root->left->h;
                 }
             }
@@ -261,26 +261,26 @@ class RedBlackTree{
         void fix(RBTnode *&root, RBTnode* &temp) {
 
                 RBTnode *par_temp = NULL; 
-                RBTnode *grand_par_temp = NULL; 
+                RBTnode *gr_par_temp = NULL; 
   
                 while ((temp != root) && (temp->color != 0) && 
                     (temp->par->color == 1)) 
                 { 
             
                     par_temp = temp->par; 
-                    grand_par_temp = temp->par->par; 
+                    gr_par_temp = temp->par->par; 
             
-                    if (par_temp == grand_par_temp->left) 
+                    if (par_temp == gr_par_temp->left) 
                     { 
             
-                        RBTnode *unc_temp = grand_par_temp->right; 
+                        RBTnode *unc_temp = gr_par_temp->right; 
             
                         if (unc_temp != NULL && unc_temp->color == 1) 
                         { 
-                            grand_par_temp->color = 1; 
+                            gr_par_temp->color = 1; 
                             par_temp->color = 0; 
                             unc_temp->color = 0; 
-                            temp = grand_par_temp; 
+                            temp = gr_par_temp; 
                         } 
             
                         else { 
@@ -291,22 +291,22 @@ class RedBlackTree{
                                 par_temp = temp->par; 
                             } 
             
-                            rotateRight(root, grand_par_temp); 
-                            swap(par_temp->color, grand_par_temp->color); 
+                            rotateRight(root, gr_par_temp); 
+                            swap(par_temp->color, gr_par_temp->color); 
                             temp = par_temp; 
                         } 
                     } 
 
                     else
                     { 
-                        RBTnode *unc_temp = grand_par_temp->left; 
+                        RBTnode *unc_temp = gr_par_temp->left; 
             
                         if ((unc_temp != NULL) && (unc_temp->color == 1)) 
                         { 
-                            grand_par_temp->color = 1; 
+                            gr_par_temp->color = 1; 
                             par_temp->color = 0; 
                             unc_temp->color = 0; 
-                            temp = grand_par_temp; 
+                            temp = gr_par_temp; 
                         } 
                         else
                         { 
@@ -317,8 +317,8 @@ class RedBlackTree{
                                 par_temp = temp->par; 
                             } 
             
-                            rotateLeft(root, grand_par_temp); 
-                            swap(par_temp->color, grand_par_temp->color); 
+                            rotateLeft(root, gr_par_temp); 
+                            swap(par_temp->color, gr_par_temp->color); 
                             temp = par_temp; 
                         } 
                     } 
@@ -487,21 +487,21 @@ int main() {
         cout << "5. Level-wise indentation print of BST/AVL/Red-Black-Tree" << "\n"; 
         cout << "6. Exit" << "\n\n";
 
-        int otempion; cin >> otempion;
+        int option; cin >> option;
 
-        switch(otempion) {
+        switch(option) {
 
             case 1: {
 
                 cout << "1. Red-Black-Tree" << "\n";
                 cout << "2. BST" << "\n";
 
-                int subotempion; cin >> subotempion;
+                int suboption; cin >> suboption;
                 
                 cout << "Enter data" << "\n";
                 int x; cin >> x;
 
-                switch(subotempion) {
+                switch(suboption) {
                     case 1 : 
                         rbt.insert(x);
                         break;
@@ -528,9 +528,9 @@ int main() {
                 cout << "2. BST" << "\n";
                 cout << "3. AVL" << "\n";
 
-                int subotempion; cin >> subotempion;
+                int suboption; cin >> suboption;
 
-                switch(subotempion) {
+                switch(suboption) {
                     case 1:
                         cout << "Inorder:";
                         rbt.inorderprint(rbt.root);
@@ -559,9 +559,9 @@ int main() {
                 cout << "2. BST" << "\n";
                 cout << "3. AVL" << "\n";
 
-                int subotempion; cin >> subotempion;
+                int suboption; cin >> suboption;
 
-                switch(subotempion) {
+                switch(suboption) {
 
                     case 1:
                         cout << "Paths to leaf:" << "\n";
@@ -587,9 +587,9 @@ int main() {
                 cout << "2. BST" << "\n";
                 cout << "3. AVL" << "\n";
 
-                int subotempion; cin >> subotempion;
+                int suboption; cin >> suboption;
 
-                switch(subotempion) {
+                switch(suboption) {
                     case 1:
                         cout << "Level-indentation print:" << "\n";
                         rbt.levelorderprint(rbt.root, 0);
