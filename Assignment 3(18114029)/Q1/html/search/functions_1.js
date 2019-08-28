@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['bstinorder',['BSTinOrder',['../Q1_8cpp.html#af0bb8d3f3ff05f68a25a7ca7b03d540a',1,'Q1.cpp']]]
+  ['getbalance',['getBalance',['../Q1_8cpp.html#a8c9560452fdf7295d0f101f61728075b',1,'Q1.cpp']]],
+  ['getbst',['getBST',['../Q1_8cpp.html#a94a6b739ac305abfe3692abb7eb36eaa',1,'Q1.cpp']]]
 ];

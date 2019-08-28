@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['avl',['AVL',['../classAVL.html',1,'']]]
+  ['bst',['BST',['../classBST.html',1,'']]],
+  ['bstnode',['BSTnode',['../classBSTnode.html',1,'']]]
 ];
