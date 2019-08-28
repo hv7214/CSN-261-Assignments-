@@ -1,0 +1,34 @@
+\hypertarget{classAVL}{}\section{A\+VL Class Reference}
+\label{classAVL}\index{A\+VL@{A\+VL}}
+
+
+This is simple class defined for \hyperlink{classAVL}{A\+VL} Tree.  
+
+
+
+
+Collaboration diagram for A\+VL\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAVL_afa399a68fc82696a9147b395ac33d1fa}\label{classAVL_afa399a68fc82696a9147b395ac33d1fa}} 
+int {\bfseries data}
+\item 
+\mbox{\Hypertarget{classAVL_ad57f3e5598a6dca42c0c0d6ccb836652}\label{classAVL_ad57f3e5598a6dca42c0c0d6ccb836652}} 
+\hyperlink{classAVL}{A\+VL} $\ast$ {\bfseries left}
+\item 
+\mbox{\Hypertarget{classAVL_aee6f09e83a289de73ccefade92bf4401}\label{classAVL_aee6f09e83a289de73ccefade92bf4401}} 
+\hyperlink{classAVL}{A\+VL} $\ast$ {\bfseries right}
+\item 
+\mbox{\Hypertarget{classAVL_ac154b727a5857acd56bd2d35ccc0446a}\label{classAVL_ac154b727a5857acd56bd2d35ccc0446a}} 
+int {\bfseries height}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is simple class defined for \hyperlink{classAVL}{A\+VL} Tree. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Q1.\+cpp\end{DoxyCompactItemize}

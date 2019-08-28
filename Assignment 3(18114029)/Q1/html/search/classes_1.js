@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['rbtnode',['RBTnode',['../classRBTnode.html',1,'']]],
-  ['redblacktree',['RedBlackTree',['../classRedBlackTree.html',1,'']]]
+  ['bst',['BST',['../classBST.html',1,'']]]
 ];

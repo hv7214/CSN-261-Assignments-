@@ -67,9 +67,11 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>BST/Red-Black-Tree/AVL.  
+<p>This program creates binary search tree, <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> tree and Red-Black Tree.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;bits/stdc++.h&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Q1.cpp:</div>
 <div class="dyncontent">
@@ -80,49 +82,1005 @@ Include dependency graph for Q1.cpp:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBSTnode.html">BSTnode</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRBTnode.html">RBTnode</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBST.html">BST</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is simple class defined for Binary Search Tree.  <a href="classBST.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRedBlackTree.html">RedBlackTree</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAVL.html">AVL</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is simple class defined for <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree.  <a href="classAVL.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRBTree.html">RBTree</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is simple class defined for Red-Black Tree.  <a href="classRBTree.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a21ba6f152e05206dcfb076dd56db63f7"><td class="memTemplParams" colspan="2"><a id="a21ba6f152e05206dcfb076dd56db63f7"></a>
-template&lt;class t &gt; </td></tr>
-<tr class="memitem:a21ba6f152e05206dcfb076dd56db63f7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>PrintAllPaths</b> (t *root)</td></tr>
-<tr class="separator:a21ba6f152e05206dcfb076dd56db63f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a431a1d87942c332c4e61eaccc00bd82c"><td class="memTemplParams" colspan="2"><a id="a431a1d87942c332c4e61eaccc00bd82c"></a>
-template&lt;class t &gt; </td></tr>
-<tr class="memitem:a431a1d87942c332c4e61eaccc00bd82c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>gotoleaf</b> (t *root, vector&lt; int &gt; v)</td></tr>
-<tr class="separator:a431a1d87942c332c4e61eaccc00bd82c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14f3446fa7cd283042cc25c85cb3cfb2"><td class="memItemLeft" align="right" valign="top"><a id="a14f3446fa7cd283042cc25c85cb3cfb2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Makearr</b> (<a class="el" href="classBSTnode.html">BSTnode</a> *root)</td></tr>
-<tr class="separator:a14f3446fa7cd283042cc25c85cb3cfb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f2174cadd40bf9e17ea5f52c782a428"><td class="memItemLeft" align="right" valign="top"><a id="a8f2174cadd40bf9e17ea5f52c782a428"></a>
-<a class="el" href="classBSTnode.html">BSTnode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>avlgen</b> (<a class="el" href="classBSTnode.html">BSTnode</a> *root, int start, int mid, int end)</td></tr>
-<tr class="separator:a8f2174cadd40bf9e17ea5f52c782a428"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8cfd8845b46a9298d6c7e3715c97725"><td class="memItemLeft" align="right" valign="top"><a id="ab8cfd8845b46a9298d6c7e3715c97725"></a>
-<a class="el" href="classBSTnode.html">BSTnode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>BSTtoAVL</b> (<a class="el" href="classBSTnode.html">BSTnode</a> *bstroot, <a class="el" href="classBSTnode.html">BSTnode</a> *avlroot)</td></tr>
-<tr class="separator:ab8cfd8845b46a9298d6c7e3715c97725"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
+<tr class="memitem:af082905f7eac6d03e92015146bbc1925"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#af082905f7eac6d03e92015146bbc1925">max</a> (int a, int b)</td></tr>
+<tr class="memdesc:af082905f7eac6d03e92015146bbc1925"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns maximum of two numbers.  <a href="#af082905f7eac6d03e92015146bbc1925">More...</a><br /></td></tr>
+<tr class="separator:af082905f7eac6d03e92015146bbc1925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd1780243f9283f8ad7d06322c79be6c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#abd1780243f9283f8ad7d06322c79be6c">height</a> (<a class="el" href="classAVL.html">AVL</a> *avlNode)</td></tr>
+<tr class="memdesc:abd1780243f9283f8ad7d06322c79be6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns height of any node in <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree.  <a href="#abd1780243f9283f8ad7d06322c79be6c">More...</a><br /></td></tr>
+<tr class="separator:abd1780243f9283f8ad7d06322c79be6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6dcce4a9cf63326874b48b764b806cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#aa6dcce4a9cf63326874b48b764b806cd">getBalance</a> (<a class="el" href="classAVL.html">AVL</a> *avlNode)</td></tr>
+<tr class="memdesc:aa6dcce4a9cf63326874b48b764b806cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the balance factor of particular node.  <a href="#aa6dcce4a9cf63326874b48b764b806cd">More...</a><br /></td></tr>
+<tr class="separator:aa6dcce4a9cf63326874b48b764b806cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0004ccc336d96984ae68e6c92a663d94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAVL.html">AVL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a0004ccc336d96984ae68e6c92a663d94">rightRotate</a> (<a class="el" href="classAVL.html">AVL</a> *avlNode)</td></tr>
+<tr class="memdesc:a0004ccc336d96984ae68e6c92a663d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method performs the right rotation of nodes to make <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree.  <a href="#a0004ccc336d96984ae68e6c92a663d94">More...</a><br /></td></tr>
+<tr class="separator:a0004ccc336d96984ae68e6c92a663d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c9609578df7bad24533ab52dec74f07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAVL.html">AVL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a4c9609578df7bad24533ab52dec74f07">leftRotate</a> (<a class="el" href="classAVL.html">AVL</a> *avlNode)</td></tr>
+<tr class="memdesc:a4c9609578df7bad24533ab52dec74f07"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method performs the left rotation of nodes to make <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree.  <a href="#a4c9609578df7bad24533ab52dec74f07">More...</a><br /></td></tr>
+<tr class="separator:a4c9609578df7bad24533ab52dec74f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ada3e517e98ec2fa0292a21272585d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAVL.html">AVL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a1ada3e517e98ec2fa0292a21272585d5">insert</a> (<a class="el" href="classAVL.html">AVL</a> *avlNode, int data)</td></tr>
+<tr class="memdesc:a1ada3e517e98ec2fa0292a21272585d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method inserts a node in <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree.  <a href="#a1ada3e517e98ec2fa0292a21272585d5">More...</a><br /></td></tr>
+<tr class="separator:a1ada3e517e98ec2fa0292a21272585d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a770597463557adf26b435af635e2803b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a770597463557adf26b435af635e2803b">height</a> (<a class="el" href="classBST.html">BST</a> *bstNode)</td></tr>
+<tr class="memdesc:a770597463557adf26b435af635e2803b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the height of any node in <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> Tree.  <a href="#a770597463557adf26b435af635e2803b">More...</a><br /></td></tr>
+<tr class="separator:a770597463557adf26b435af635e2803b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6d3db1169f6a849ba35cbc4e7d9bf1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#ab6d3db1169f6a849ba35cbc4e7d9bf1a">getBalance</a> (<a class="el" href="classBST.html">BST</a> *bstNode)</td></tr>
+<tr class="memdesc:ab6d3db1169f6a849ba35cbc4e7d9bf1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the balance factor of any node in <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> Tree.  <a href="#ab6d3db1169f6a849ba35cbc4e7d9bf1a">More...</a><br /></td></tr>
+<tr class="separator:ab6d3db1169f6a849ba35cbc4e7d9bf1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a255b4a9b37f54e4be10323b9f0f69089"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBST.html">BST</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a255b4a9b37f54e4be10323b9f0f69089">insert</a> (<a class="el" href="classBST.html">BST</a> *bstNode, int data)</td></tr>
+<tr class="memdesc:a255b4a9b37f54e4be10323b9f0f69089"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method inserts a node in <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> Tree.  <a href="#a255b4a9b37f54e4be10323b9f0f69089">More...</a><br /></td></tr>
+<tr class="separator:a255b4a9b37f54e4be10323b9f0f69089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a008a09bfbc5758475f41f65c45881468"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a008a09bfbc5758475f41f65c45881468">printPaths</a> (<a class="el" href="classBST.html">BST</a> *bstNode, int *arr, int length)</td></tr>
+<tr class="memdesc:a008a09bfbc5758475f41f65c45881468"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method prints the path from a node to all the leaves of <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> Tree.  <a href="#a008a09bfbc5758475f41f65c45881468">More...</a><br /></td></tr>
+<tr class="separator:a008a09bfbc5758475f41f65c45881468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c30ec257402cc134a4540cf2415286c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a2c30ec257402cc134a4540cf2415286c">getPaths</a> (<a class="el" href="classBST.html">BST</a> *bstNode)</td></tr>
+<tr class="memdesc:a2c30ec257402cc134a4540cf2415286c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns all the paths of the <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> tree.  <a href="#a2c30ec257402cc134a4540cf2415286c">More...</a><br /></td></tr>
+<tr class="separator:a2c30ec257402cc134a4540cf2415286c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a40b9b5b12145c6dc3f5d15ce399d6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a8a40b9b5b12145c6dc3f5d15ce399d6a">printPaths</a> (<a class="el" href="classAVL.html">AVL</a> *avlNode, int *arr, int length)</td></tr>
+<tr class="memdesc:a8a40b9b5b12145c6dc3f5d15ce399d6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method prints the path from a node to all the leaves of <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree.  <a href="#a8a40b9b5b12145c6dc3f5d15ce399d6a">More...</a><br /></td></tr>
+<tr class="separator:a8a40b9b5b12145c6dc3f5d15ce399d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37ca4e2b6a759eb41cac73929bf9c8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#ad37ca4e2b6a759eb41cac73929bf9c8b">getPaths</a> (<a class="el" href="classAVL.html">AVL</a> *avlNode)</td></tr>
+<tr class="memdesc:ad37ca4e2b6a759eb41cac73929bf9c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns all the paths of the <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> tree.  <a href="#ad37ca4e2b6a759eb41cac73929bf9c8b">More...</a><br /></td></tr>
+<tr class="separator:ad37ca4e2b6a759eb41cac73929bf9c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefc82e53860e37b67c327a3f36e37ac7"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#aefc82e53860e37b67c327a3f36e37ac7">getBST</a> (<a class="el" href="classBST.html">BST</a> *bstNode)</td></tr>
+<tr class="memdesc:aefc82e53860e37b67c327a3f36e37ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method stores the <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> Tree in a vector.  <a href="#aefc82e53860e37b67c327a3f36e37ac7">More...</a><br /></td></tr>
+<tr class="separator:aefc82e53860e37b67c327a3f36e37ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0bb8d3f3ff05f68a25a7ca7b03d540a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#af0bb8d3f3ff05f68a25a7ca7b03d540a">BSTinOrder</a> (<a class="el" href="classBST.html">BST</a> *bstNode)</td></tr>
+<tr class="memdesc:af0bb8d3f3ff05f68a25a7ca7b03d540a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method prints the inorder traversal of <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> Tree.  <a href="#af0bb8d3f3ff05f68a25a7ca7b03d540a">More...</a><br /></td></tr>
+<tr class="separator:af0bb8d3f3ff05f68a25a7ca7b03d540a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac25c15e2499e31904fbd2650ec363f9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#ac25c15e2499e31904fbd2650ec363f9e">printBSTTree</a> (<a class="el" href="classBST.html">BST</a> *bstNode, int space)</td></tr>
+<tr class="memdesc:ac25c15e2499e31904fbd2650ec363f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method prints the <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> Tree with proper indentation.  <a href="#ac25c15e2499e31904fbd2650ec363f9e">More...</a><br /></td></tr>
+<tr class="separator:ac25c15e2499e31904fbd2650ec363f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70407ce3bae050c900250e1910dee725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a70407ce3bae050c900250e1910dee725">AVLinOrder</a> (<a class="el" href="classAVL.html">AVL</a> *avlNode)</td></tr>
+<tr class="memdesc:a70407ce3bae050c900250e1910dee725"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method prints the inorder traversal of <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree.  <a href="#a70407ce3bae050c900250e1910dee725">More...</a><br /></td></tr>
+<tr class="separator:a70407ce3bae050c900250e1910dee725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc170c3a55eec2935d381f174f75878c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#abc170c3a55eec2935d381f174f75878c">printAVLTree</a> (<a class="el" href="classAVL.html">AVL</a> *avlNode, int space)</td></tr>
+<tr class="memdesc:abc170c3a55eec2935d381f174f75878c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method prints the <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree with proper indentation.  <a href="#abc170c3a55eec2935d381f174f75878c">More...</a><br /></td></tr>
+<tr class="separator:abc170c3a55eec2935d381f174f75878c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2670504f889c687ef7591e93746110b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a2670504f889c687ef7591e93746110b8">leftrotate</a> (<a class="el" href="classRBTree.html">RBTree</a> *rbNode)</td></tr>
+<tr class="memdesc:a2670504f889c687ef7591e93746110b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method performs left rotation of any node in <a class="el" href="classRBTree.html" title="This is simple class defined for Red-Black Tree. ">RBTree</a>.  <a href="#a2670504f889c687ef7591e93746110b8">More...</a><br /></td></tr>
+<tr class="separator:a2670504f889c687ef7591e93746110b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3947baf51681a17c44fbd6a58a912620"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a3947baf51681a17c44fbd6a58a912620">rightrotate</a> (<a class="el" href="classRBTree.html">RBTree</a> *rbNode)</td></tr>
+<tr class="memdesc:a3947baf51681a17c44fbd6a58a912620"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method performs right rotation of any node in <a class="el" href="classRBTree.html" title="This is simple class defined for Red-Black Tree. ">RBTree</a>.  <a href="#a3947baf51681a17c44fbd6a58a912620">More...</a><br /></td></tr>
+<tr class="separator:a3947baf51681a17c44fbd6a58a912620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40cd4c68638e53e6c3b4d9f27183515"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#ae40cd4c68638e53e6c3b4d9f27183515">insertfix</a> (<a class="el" href="classRBTree.html">RBTree</a> *rbNode)</td></tr>
+<tr class="memdesc:ae40cd4c68638e53e6c3b4d9f27183515"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method performs the fixing of color and rotation after insertion of a node in RB Tree.  <a href="#ae40cd4c68638e53e6c3b4d9f27183515">More...</a><br /></td></tr>
+<tr class="separator:ae40cd4c68638e53e6c3b4d9f27183515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65d12c73ef8575049f3d51e6f68b8a5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a65d12c73ef8575049f3d51e6f68b8a5d">insert</a> (int z)</td></tr>
+<tr class="memdesc:a65d12c73ef8575049f3d51e6f68b8a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method inserts a node in RB Tree.  <a href="#a65d12c73ef8575049f3d51e6f68b8a5d">More...</a><br /></td></tr>
+<tr class="separator:a65d12c73ef8575049f3d51e6f68b8a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a614f7bef3f86aa692d01b1a2d0c22397"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a614f7bef3f86aa692d01b1a2d0c22397">getHeight</a> (<a class="el" href="classRBTree.html">RBTree</a> *rbNode)</td></tr>
+<tr class="memdesc:a614f7bef3f86aa692d01b1a2d0c22397"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns height of node in RB Tree.  <a href="#a614f7bef3f86aa692d01b1a2d0c22397">More...</a><br /></td></tr>
+<tr class="separator:a614f7bef3f86aa692d01b1a2d0c22397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91404372dd56277bc2a2c308b0125472"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a91404372dd56277bc2a2c308b0125472">getBalance</a> (<a class="el" href="classRBTree.html">RBTree</a> *rbNode)</td></tr>
+<tr class="memdesc:a91404372dd56277bc2a2c308b0125472"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the balance factor of node in RB Tree.  <a href="#a91404372dd56277bc2a2c308b0125472">More...</a><br /></td></tr>
+<tr class="separator:a91404372dd56277bc2a2c308b0125472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75cc8950e1184ccb7d49e666d88bf5ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a75cc8950e1184ccb7d49e666d88bf5ee">printRBTree</a> (<a class="el" href="classRBTree.html">RBTree</a> *rbNode, int space)</td></tr>
+<tr class="memdesc:a75cc8950e1184ccb7d49e666d88bf5ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method prints the RB Tree with proper indentation.  <a href="#a75cc8950e1184ccb7d49e666d88bf5ee">More...</a><br /></td></tr>
+<tr class="separator:a75cc8950e1184ccb7d49e666d88bf5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a462fa8912c7bf530962dc0fbb35ac4b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a462fa8912c7bf530962dc0fbb35ac4b1">RBTreeInOrder</a> (<a class="el" href="classRBTree.html">RBTree</a> *rbNode)</td></tr>
+<tr class="memdesc:a462fa8912c7bf530962dc0fbb35ac4b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method prints the inorder traversal of RB Tree.  <a href="#a462fa8912c7bf530962dc0fbb35ac4b1">More...</a><br /></td></tr>
+<tr class="separator:a462fa8912c7bf530962dc0fbb35ac4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b0b638edd0e48e82401de365c1f10aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a6b0b638edd0e48e82401de365c1f10aa">printPaths</a> (<a class="el" href="classRBTree.html">RBTree</a> *rbNode, int *arr, int size)</td></tr>
+<tr class="memdesc:a6b0b638edd0e48e82401de365c1f10aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method prints the path from a node to all the leaves of <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree.  <a href="#a6b0b638edd0e48e82401de365c1f10aa">More...</a><br /></td></tr>
+<tr class="separator:a6b0b638edd0e48e82401de365c1f10aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36bcb8cca654b7d8fecd765b5455703d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#a36bcb8cca654b7d8fecd765b5455703d">getPaths</a> (<a class="el" href="classRBTree.html">RBTree</a> *rbNode)</td></tr>
+<tr class="memdesc:a36bcb8cca654b7d8fecd765b5455703d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns all the paths of the RB tree.  <a href="#a36bcb8cca654b7d8fecd765b5455703d">More...</a><br /></td></tr>
+<tr class="separator:a36bcb8cca654b7d8fecd765b5455703d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method creates a menu for insertion in Binary Search Tree and RB Tree and creates a <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree from Binary Search Tree. This method prints inorder of all trees and even displays all the paths in tree and prints the nodes of tree with proper indentation.  <a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">More...</a><br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a9d75c9ca70fceb20bd3118cca57a7a0a"><td class="memItemLeft" align="right" valign="top"><a id="a9d75c9ca70fceb20bd3118cca57a7a0a"></a>
-vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>v</b></td></tr>
-<tr class="separator:a9d75c9ca70fceb20bd3118cca57a7a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab01909fa7f88c726fe0ba41b02047035"><td class="memItemLeft" align="right" valign="top"><a id="ab01909fa7f88c726fe0ba41b02047035"></a>
+vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Q1_8cpp.html#ab01909fa7f88c726fe0ba41b02047035">arrBST</a></td></tr>
+<tr class="memdesc:ab01909fa7f88c726fe0ba41b02047035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> Tree. <br /></td></tr>
+<tr class="separator:ab01909fa7f88c726fe0ba41b02047035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af773305a8180295bf0194c540be0445d"><td class="memItemLeft" align="right" valign="top"><a id="af773305a8180295bf0194c540be0445d"></a>
+<a class="el" href="classRBTree.html">RBTree</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>root</b> = NULL</td></tr>
+<tr class="separator:af773305a8180295bf0194c540be0445d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6468b59c1cac9d50b64bd8e02d10766b"><td class="memItemLeft" align="right" valign="top"><a id="a6468b59c1cac9d50b64bd8e02d10766b"></a>
+<a class="el" href="classRBTree.html">RBTree</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>q</b> = NULL</td></tr>
+<tr class="separator:a6468b59c1cac9d50b64bd8e02d10766b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>BST/Red-Black-Tree/AVL. </p>
-<dl class="section author"><dt>Author</dt><dd>Harshit Verma</dd></dl>
-<dl class="section date"><dt>Date</dt><dd>08/17/19 </dd></dl>
-</div></div><!-- contents -->
+<div class="textblock"><p>This program creates binary search tree, <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> tree and Red-Black Tree. </p>
+<dl class="section author"><dt>Author</dt><dd>Harshit Verma </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2019-08-20 </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a70407ce3bae050c900250e1910dee725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70407ce3bae050c900250e1910dee725">&#9670;&nbsp;</a></span>AVLinOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AVLinOrder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAVL.html">AVL</a> *&#160;</td>
+          <td class="paramname"><em>avlNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method prints the inorder traversal of <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">avlNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af0bb8d3f3ff05f68a25a7ca7b03d540a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0bb8d3f3ff05f68a25a7ca7b03d540a">&#9670;&nbsp;</a></span>BSTinOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BSTinOrder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBST.html">BST</a> *&#160;</td>
+          <td class="paramname"><em>bstNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method prints the inorder traversal of <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bstNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa6dcce4a9cf63326874b48b764b806cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6dcce4a9cf63326874b48b764b806cd">&#9670;&nbsp;</a></span>getBalance() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getBalance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAVL.html">AVL</a> *&#160;</td>
+          <td class="paramname"><em>avlNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method returns the balance factor of particular node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">avlNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="ab6d3db1169f6a849ba35cbc4e7d9bf1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6d3db1169f6a849ba35cbc4e7d9bf1a">&#9670;&nbsp;</a></span>getBalance() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getBalance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBST.html">BST</a> *&#160;</td>
+          <td class="paramname"><em>bstNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method returns the balance factor of any node in <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bstNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="a91404372dd56277bc2a2c308b0125472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91404372dd56277bc2a2c308b0125472">&#9670;&nbsp;</a></span>getBalance() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getBalance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRBTree.html">RBTree</a> *&#160;</td>
+          <td class="paramname"><em>rbNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method returns the balance factor of node in RB Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rbNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="aefc82e53860e37b67c327a3f36e37ac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefc82e53860e37b67c327a3f36e37ac7">&#9670;&nbsp;</a></span>getBST()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;int&gt; getBST </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBST.html">BST</a> *&#160;</td>
+          <td class="paramname"><em>bstNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method stores the <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> Tree in a vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bstNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector&lt;int&gt; </dd></dl>
+
+</div>
+</div>
+<a id="a614f7bef3f86aa692d01b1a2d0c22397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a614f7bef3f86aa692d01b1a2d0c22397">&#9670;&nbsp;</a></span>getHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getHeight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRBTree.html">RBTree</a> *&#160;</td>
+          <td class="paramname"><em>rbNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method returns height of node in RB Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rbNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="a2c30ec257402cc134a4540cf2415286c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c30ec257402cc134a4540cf2415286c">&#9670;&nbsp;</a></span>getPaths() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getPaths </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBST.html">BST</a> *&#160;</td>
+          <td class="paramname"><em>bstNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method returns all the paths of the <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bstNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad37ca4e2b6a759eb41cac73929bf9c8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad37ca4e2b6a759eb41cac73929bf9c8b">&#9670;&nbsp;</a></span>getPaths() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getPaths </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAVL.html">AVL</a> *&#160;</td>
+          <td class="paramname"><em>avlNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method returns all the paths of the <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">avlNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a36bcb8cca654b7d8fecd765b5455703d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36bcb8cca654b7d8fecd765b5455703d">&#9670;&nbsp;</a></span>getPaths() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getPaths </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRBTree.html">RBTree</a> *&#160;</td>
+          <td class="paramname"><em>rbNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method returns all the paths of the RB tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rbNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abd1780243f9283f8ad7d06322c79be6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd1780243f9283f8ad7d06322c79be6c">&#9670;&nbsp;</a></span>height() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int height </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAVL.html">AVL</a> *&#160;</td>
+          <td class="paramname"><em>avlNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method returns height of any node in <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">avlNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="a770597463557adf26b435af635e2803b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a770597463557adf26b435af635e2803b">&#9670;&nbsp;</a></span>height() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int height </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBST.html">BST</a> *&#160;</td>
+          <td class="paramname"><em>bstNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method returns the height of any node in <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bstNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="a1ada3e517e98ec2fa0292a21272585d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ada3e517e98ec2fa0292a21272585d5">&#9670;&nbsp;</a></span>insert() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAVL.html">AVL</a>* insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAVL.html">AVL</a> *&#160;</td>
+          <td class="paramname"><em>avlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method inserts a node in <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">avlNode</td><td></td></tr>
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>AVL* </dd></dl>
+
+</div>
+</div>
+<a id="a255b4a9b37f54e4be10323b9f0f69089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a255b4a9b37f54e4be10323b9f0f69089">&#9670;&nbsp;</a></span>insert() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classBST.html">BST</a>* insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBST.html">BST</a> *&#160;</td>
+          <td class="paramname"><em>bstNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method inserts a node in <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bstNode</td><td></td></tr>
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>BST* </dd></dl>
+
+</div>
+</div>
+<a id="a65d12c73ef8575049f3d51e6f68b8a5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65d12c73ef8575049f3d51e6f68b8a5d">&#9670;&nbsp;</a></span>insert() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void insert </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>z</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method inserts a node in RB Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">z</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae40cd4c68638e53e6c3b4d9f27183515"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae40cd4c68638e53e6c3b4d9f27183515">&#9670;&nbsp;</a></span>insertfix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void insertfix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRBTree.html">RBTree</a> *&#160;</td>
+          <td class="paramname"><em>rbNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method performs the fixing of color and rotation after insertion of a node in RB Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rbNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4c9609578df7bad24533ab52dec74f07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c9609578df7bad24533ab52dec74f07">&#9670;&nbsp;</a></span>leftRotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAVL.html">AVL</a>* leftRotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAVL.html">AVL</a> *&#160;</td>
+          <td class="paramname"><em>avlNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method performs the left rotation of nodes to make <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">avlNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>AVL* </dd></dl>
+
+</div>
+</div>
+<a id="a2670504f889c687ef7591e93746110b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2670504f889c687ef7591e93746110b8">&#9670;&nbsp;</a></span>leftrotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void leftrotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRBTree.html">RBTree</a> *&#160;</td>
+          <td class="paramname"><em>rbNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method performs left rotation of any node in <a class="el" href="classRBTree.html" title="This is simple class defined for Red-Black Tree. ">RBTree</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rbNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method creates a menu for insertion in Binary Search Tree and RB Tree and creates a <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree from Binary Search Tree. This method prints inorder of all trees and even displays all the paths in tree and prints the nodes of tree with proper indentation. </p>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="af082905f7eac6d03e92015146bbc1925"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af082905f7eac6d03e92015146bbc1925">&#9670;&nbsp;</a></span>max()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int max </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method returns maximum of two numbers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td></td></tr>
+    <tr><td class="paramname">b</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="abc170c3a55eec2935d381f174f75878c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc170c3a55eec2935d381f174f75878c">&#9670;&nbsp;</a></span>printAVLTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printAVLTree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAVL.html">AVL</a> *&#160;</td>
+          <td class="paramname"><em>avlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>space</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method prints the <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree with proper indentation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">avlNode</td><td></td></tr>
+    <tr><td class="paramname">space</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac25c15e2499e31904fbd2650ec363f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac25c15e2499e31904fbd2650ec363f9e">&#9670;&nbsp;</a></span>printBSTTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printBSTTree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBST.html">BST</a> *&#160;</td>
+          <td class="paramname"><em>bstNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>space</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method prints the <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> Tree with proper indentation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bstNode</td><td></td></tr>
+    <tr><td class="paramname">space</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a008a09bfbc5758475f41f65c45881468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a008a09bfbc5758475f41f65c45881468">&#9670;&nbsp;</a></span>printPaths() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printPaths </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBST.html">BST</a> *&#160;</td>
+          <td class="paramname"><em>bstNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method prints the path from a node to all the leaves of <a class="el" href="classBST.html" title="This is simple class defined for Binary Search Tree. ">BST</a> Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bstNode</td><td></td></tr>
+    <tr><td class="paramname">arr</td><td></td></tr>
+    <tr><td class="paramname">length</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8a40b9b5b12145c6dc3f5d15ce399d6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a40b9b5b12145c6dc3f5d15ce399d6a">&#9670;&nbsp;</a></span>printPaths() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printPaths </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAVL.html">AVL</a> *&#160;</td>
+          <td class="paramname"><em>avlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method prints the path from a node to all the leaves of <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">avlNode</td><td></td></tr>
+    <tr><td class="paramname">arr</td><td></td></tr>
+    <tr><td class="paramname">length</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6b0b638edd0e48e82401de365c1f10aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b0b638edd0e48e82401de365c1f10aa">&#9670;&nbsp;</a></span>printPaths() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printPaths </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRBTree.html">RBTree</a> *&#160;</td>
+          <td class="paramname"><em>rbNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method prints the path from a node to all the leaves of <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rbNode</td><td></td></tr>
+    <tr><td class="paramname">arr</td><td></td></tr>
+    <tr><td class="paramname">size</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a75cc8950e1184ccb7d49e666d88bf5ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75cc8950e1184ccb7d49e666d88bf5ee">&#9670;&nbsp;</a></span>printRBTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printRBTree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRBTree.html">RBTree</a> *&#160;</td>
+          <td class="paramname"><em>rbNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>space</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method prints the RB Tree with proper indentation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rbNode</td><td></td></tr>
+    <tr><td class="paramname">space</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a462fa8912c7bf530962dc0fbb35ac4b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a462fa8912c7bf530962dc0fbb35ac4b1">&#9670;&nbsp;</a></span>RBTreeInOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RBTreeInOrder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRBTree.html">RBTree</a> *&#160;</td>
+          <td class="paramname"><em>rbNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method prints the inorder traversal of RB Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rbNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0004ccc336d96984ae68e6c92a663d94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0004ccc336d96984ae68e6c92a663d94">&#9670;&nbsp;</a></span>rightRotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAVL.html">AVL</a>* rightRotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAVL.html">AVL</a> *&#160;</td>
+          <td class="paramname"><em>avlNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method performs the right rotation of nodes to make <a class="el" href="classAVL.html" title="This is simple class defined for AVL Tree. ">AVL</a> Tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">avlNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>AVL* </dd></dl>
+
+</div>
+</div>
+<a id="a3947baf51681a17c44fbd6a58a912620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3947baf51681a17c44fbd6a58a912620">&#9670;&nbsp;</a></span>rightrotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rightrotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRBTree.html">RBTree</a> *&#160;</td>
+          <td class="paramname"><em>rbNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method performs right rotation of any node in <a class="el" href="classRBTree.html" title="This is simple class defined for Red-Black Tree. ">RBTree</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rbNode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

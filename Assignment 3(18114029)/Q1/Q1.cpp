@@ -420,53 +420,173 @@ void gotoleaf(t *root, vector<int> v) {
     gotoleaf(root->right, v);    
 }
 
-vector<int> v;
+/**
+ * @brief This method returns maximum of two numbers
+ * 
+ * @param a 
+ * @param b 
+ * @return int 
+ */
+int max(int a, int b)  
+{  
+    return (a > b)? a : b;  
+}  
+  
+/**
+ * @brief This method returns height of any node in AVL Tree
+ * 
+ * @param avlNode 
+ * @return int 
+ */
+int height(BSTnode *avlNode)  {  
+    if (avlNode == NULL)  
+        return 0;  
+    return avlNode->h;  
+} 
 
-/*
-* Helper function for BSTtoAVL
-* @author harshit Verma
-* @date 08/17/2019
-*/
-void Makearr(BSTnode *root) {
+/**
+ * @brief This method returns the balance factor of particular node
+ * 
+ * @param avlNode 
+ * @return int 
+ */
+int getBalance(BSTnode *avlNode)  {  
+    if (avlNode == NULL)  
+        return 0;  
+    return height(avlNode->left) - height(avlNode->right);  
+}  
 
-    if(root == NULL) return;
-    
-    Makearr(root->left);
-    v.push_back(root->data);
-    Makearr(root->right);
+/**
+ * @brief This method performs the right rotation of nodes to make AVL Tree
+ * 
+ * @param avlNode 
+ * @return AVL* 
+ */
+BSTnode *rightRotate(BSTnode *avlNode)  
+{  
+    BSTnode *avlNodeLeft = avlNode->left;  
+    BSTnode *node = avlNodeLeft->right;  
+  
+    avlNodeLeft->right = avlNode;  
+    avlNode->left = node;  
+  
+    avlNode->h = max(height(avlNode->left), 
+                    height(avlNode->right)) + 1;  
+    avlNodeLeft->h = max(height(avlNodeLeft->left), 
+                    height(avlNodeLeft->right)) + 1;  
+  
+    return avlNodeLeft;  
+}  
+
+/**
+ * @brief This method performs the left rotation of nodes to make AVL Tree
+ * 
+ * @param avlNode 
+ * @return AVL* 
+ */
+BSTnode *leftRotate(BSTnode *avlNode)  
+{  
+    BSTnode *avlNodeRight = avlNode->right;  
+    BSTnode *node = avlNodeRight->left;  
+
+    avlNodeRight->left = avlNode;  
+    avlNode->right = node;  
+
+    avlNode->h = max(height(avlNode->left),     
+                    height(avlNode->right)) + 1;  
+    avlNodeRight->h = max(height(avlNodeRight->left),  
+                    height(avlNodeRight->right)) + 1;  
+
+    return avlNodeRight;  
 }
 
-/*
-* Helper function for avlgen
-* @author harshit Verma
-* @date 08/17/2019
-*/
-BSTnode* avlgen(BSTnode*root, int start, int mid, int end) {
+/**
+ * @brief This method inserts a node in AVL Tree
+ * 
+ * @param avlNode 
+ * @param data 
+ * @return AVL* 
+ */
+BSTnode* insert(BSTnode* avlNode, int data)  
+{  
+    if (avlNode == NULL) {
+      BSTnode* node = new BSTnode(data); 
+	    node->left = NULL; 
+	    node->right = NULL; 
+	    node->h = 1;
+      return node;
+    }
 
-    if(start > end) return NULL;
+	if (data < avlNode->data) 
+		avlNode->left = insert(avlNode->left, data); 
+	else if (data > avlNode->data) 
+		avlNode->right = insert(avlNode->right, data); 
+	else
+		return avlNode; 
 
-    root = new BSTnode(v[mid]);
-    root->h = mid - start + 1;
-    
-    root->left = avlgen(root->left, start, (start + mid - 1) / 2, mid-1);
-    root->right = avlgen(root->right, mid+1, (mid + 1 + end) / 2, end);
+	avlNode->h = 1 + max(height(avlNode->left), 
+						height(avlNode->right)); 
 
-    root->balancefactor = abs( ((root->left != NULL) ? root->left->h : 0) - ((root->right != NULL) ? root->right->h : 0) );    
-    return root;
+	int balance = getBalance(avlNode); 
+
+	if (balance > 1 && data < avlNode->left->data) 
+		return rightRotate(avlNode); 
+
+	if (balance < -1 && data > avlNode->right->data) 
+		return leftRotate(avlNode); 
+
+	if (balance > 1 && data > avlNode->left->data) 
+	{ 
+		avlNode->left = leftRotate(avlNode->left); 
+		return rightRotate(avlNode); 
+	} 
+
+	if (balance < -1 && data < avlNode->right->data) 
+	{ 
+		avlNode->right = rightRotate(avlNode->right); 
+		return leftRotate(avlNode); 
+	} 
+
+	return avlNode;  
 }
 
-/*
-* This function is used to convert to BST to AVL
-* @author harshit Verma
-* @date 08/17/2019
-*/
-BSTnode* BSTtoAVL(BSTnode *bstroot, BSTnode *avlroot) {
+vector<int> arrBST;
 
-    Makearr(bstroot);
+/**
+ * @brief This method stores the BST Tree in a vector
+ * 
+ * @param bstNode 
+ * @return vector<int> 
+ */
+vector<int> getBST(BSTnode* bstNode){
+  if(bstNode != NULL){
+    getBST(bstNode->left);
+    arrBST.push_back(bstNode->data);
+    getBST(bstNode->right);
+  }
+  return arrBST;
+}
 
-    avlroot = avlgen(avlroot, 0, (v.size() / 2) - 1, v.size() - 1);
-
-    return avlroot;
+/**
+ * @brief This method prints the AVL Tree with proper indentation
+ * 
+ * @param avlNode 
+ * @param space 
+ */
+void printAVLTree(BSTnode* avlNode, int space){
+  if(avlNode != NULL){
+    for(int i=0;i<space;i++){
+      cout<<"      ";
+    }
+    int balance = getBalance(avlNode);
+    if(avlNode->left == 0 && avlNode->right == 0){
+      cout<<avlNode->data<<endl;
+    }else{
+      cout<<avlNode->data<<"["<<abs(balance)<<"]"<<endl;
+    }
+    printAVLTree(avlNode->left, space+1);
+    printAVLTree(avlNode->right, space+1);
+  }
 }
 
 int main() {
@@ -474,6 +594,7 @@ int main() {
     RedBlackTree rbt;
     BST bst;
     BST avl;
+    vector<int> BSTTree;
 
     cout << "Welcome!\n";
 
@@ -515,9 +636,13 @@ int main() {
             }
 
             case 2: {
-                v.clear();
-                avl.root = NULL;
-                avl.root = BSTtoAVL(bst.root, avl.root);
+                
+                BSTTree.clear();
+                BSTTree = getBST(bst.root);
+
+                for(int i=0;i<BSTTree.size();i++){
+                  avl.root = insert(avl.root, BSTTree[i]);
+                }
                 cout << "Done successfully!" << "\n";
                 break;
             }
@@ -602,7 +727,8 @@ int main() {
 
                     case 3:
                         cout << "Level-indentation print:" << "\n";
-                        avl.levelorderprint(avl.root, 0);
+                        printAVLTree(avl.root, 0);
+                        // avl.levelorderprint(avl.root, 0);
                         break;
 
                     default:

@@ -2,58 +2,600 @@
 \label{Q1_8cpp}\index{Q1.\+cpp@{Q1.\+cpp}}
 
 
-B\+S\+T/\+Red-\/\+Black-\/\+Tree/\+A\+VL.  
+This program creates binary search tree, \hyperlink{classAVL}{A\+VL} tree and Red-\/\+Black Tree.  
 
 
 {\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
 Include dependency graph for Q1.\+cpp\+:
 % FIG 0
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{classBSTnode}{B\+S\+Tnode}
-\item 
-class \hyperlink{classRBTnode}{R\+B\+Tnode}
-\item 
 class \hyperlink{classBST}{B\+ST}
-\item 
-class \hyperlink{classRedBlackTree}{Red\+Black\+Tree}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This is simple class defined for Binary Search Tree. \end{DoxyCompactList}\item 
+class \hyperlink{classAVL}{A\+VL}
+\begin{DoxyCompactList}\small\item\em This is simple class defined for \hyperlink{classAVL}{A\+VL} Tree. \end{DoxyCompactList}\item 
+class \hyperlink{classRBTree}{R\+B\+Tree}
+\begin{DoxyCompactList}\small\item\em This is simple class defined for Red-\/\+Black Tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{Q1_8cpp_a21ba6f152e05206dcfb076dd56db63f7}\label{Q1_8cpp_a21ba6f152e05206dcfb076dd56db63f7}} 
-{\footnotesize template$<$class t $>$ }\\void {\bfseries Print\+All\+Paths} (t $\ast$root)
-\item 
-\mbox{\Hypertarget{Q1_8cpp_a431a1d87942c332c4e61eaccc00bd82c}\label{Q1_8cpp_a431a1d87942c332c4e61eaccc00bd82c}} 
-{\footnotesize template$<$class t $>$ }\\void {\bfseries gotoleaf} (t $\ast$root, vector$<$ int $>$ v)
-\item 
-\mbox{\Hypertarget{Q1_8cpp_a14f3446fa7cd283042cc25c85cb3cfb2}\label{Q1_8cpp_a14f3446fa7cd283042cc25c85cb3cfb2}} 
-void {\bfseries Makearr} (\hyperlink{classBSTnode}{B\+S\+Tnode} $\ast$root)
-\item 
-\mbox{\Hypertarget{Q1_8cpp_a8f2174cadd40bf9e17ea5f52c782a428}\label{Q1_8cpp_a8f2174cadd40bf9e17ea5f52c782a428}} 
-\hyperlink{classBSTnode}{B\+S\+Tnode} $\ast$ {\bfseries avlgen} (\hyperlink{classBSTnode}{B\+S\+Tnode} $\ast$root, int start, int mid, int end)
-\item 
-\mbox{\Hypertarget{Q1_8cpp_ab8cfd8845b46a9298d6c7e3715c97725}\label{Q1_8cpp_ab8cfd8845b46a9298d6c7e3715c97725}} 
-\hyperlink{classBSTnode}{B\+S\+Tnode} $\ast$ {\bfseries B\+S\+Tto\+A\+VL} (\hyperlink{classBSTnode}{B\+S\+Tnode} $\ast$bstroot, \hyperlink{classBSTnode}{B\+S\+Tnode} $\ast$avlroot)
-\item 
-\mbox{\Hypertarget{Q1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Q1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
-int {\bfseries main} ()
-\end{DoxyCompactItemize}
+int \hyperlink{Q1_8cpp_af082905f7eac6d03e92015146bbc1925}{max} (int a, int b)
+\begin{DoxyCompactList}\small\item\em This method returns maximum of two numbers. \end{DoxyCompactList}\item 
+int \hyperlink{Q1_8cpp_abd1780243f9283f8ad7d06322c79be6c}{height} (\hyperlink{classAVL}{A\+VL} $\ast$avl\+Node)
+\begin{DoxyCompactList}\small\item\em This method returns height of any node in \hyperlink{classAVL}{A\+VL} Tree. \end{DoxyCompactList}\item 
+int \hyperlink{Q1_8cpp_aa6dcce4a9cf63326874b48b764b806cd}{get\+Balance} (\hyperlink{classAVL}{A\+VL} $\ast$avl\+Node)
+\begin{DoxyCompactList}\small\item\em This method returns the balance factor of particular node. \end{DoxyCompactList}\item 
+\hyperlink{classAVL}{A\+VL} $\ast$ \hyperlink{Q1_8cpp_a0004ccc336d96984ae68e6c92a663d94}{right\+Rotate} (\hyperlink{classAVL}{A\+VL} $\ast$avl\+Node)
+\begin{DoxyCompactList}\small\item\em This method performs the right rotation of nodes to make \hyperlink{classAVL}{A\+VL} Tree. \end{DoxyCompactList}\item 
+\hyperlink{classAVL}{A\+VL} $\ast$ \hyperlink{Q1_8cpp_a4c9609578df7bad24533ab52dec74f07}{left\+Rotate} (\hyperlink{classAVL}{A\+VL} $\ast$avl\+Node)
+\begin{DoxyCompactList}\small\item\em This method performs the left rotation of nodes to make \hyperlink{classAVL}{A\+VL} Tree. \end{DoxyCompactList}\item 
+\hyperlink{classAVL}{A\+VL} $\ast$ \hyperlink{Q1_8cpp_a1ada3e517e98ec2fa0292a21272585d5}{insert} (\hyperlink{classAVL}{A\+VL} $\ast$avl\+Node, int data)
+\begin{DoxyCompactList}\small\item\em This method inserts a node in \hyperlink{classAVL}{A\+VL} Tree. \end{DoxyCompactList}\item 
+int \hyperlink{Q1_8cpp_a770597463557adf26b435af635e2803b}{height} (\hyperlink{classBST}{B\+ST} $\ast$bst\+Node)
+\begin{DoxyCompactList}\small\item\em This method returns the height of any node in \hyperlink{classBST}{B\+ST} Tree. \end{DoxyCompactList}\item 
+int \hyperlink{Q1_8cpp_ab6d3db1169f6a849ba35cbc4e7d9bf1a}{get\+Balance} (\hyperlink{classBST}{B\+ST} $\ast$bst\+Node)
+\begin{DoxyCompactList}\small\item\em This method returns the balance factor of any node in \hyperlink{classBST}{B\+ST} Tree. \end{DoxyCompactList}\item 
+\hyperlink{classBST}{B\+ST} $\ast$ \hyperlink{Q1_8cpp_a255b4a9b37f54e4be10323b9f0f69089}{insert} (\hyperlink{classBST}{B\+ST} $\ast$bst\+Node, int data)
+\begin{DoxyCompactList}\small\item\em This method inserts a node in \hyperlink{classBST}{B\+ST} Tree. \end{DoxyCompactList}\item 
+void \hyperlink{Q1_8cpp_a008a09bfbc5758475f41f65c45881468}{print\+Paths} (\hyperlink{classBST}{B\+ST} $\ast$bst\+Node, int $\ast$arr, int length)
+\begin{DoxyCompactList}\small\item\em This method prints the path from a node to all the leaves of \hyperlink{classBST}{B\+ST} Tree. \end{DoxyCompactList}\item 
+void \hyperlink{Q1_8cpp_a2c30ec257402cc134a4540cf2415286c}{get\+Paths} (\hyperlink{classBST}{B\+ST} $\ast$bst\+Node)
+\begin{DoxyCompactList}\small\item\em This method returns all the paths of the \hyperlink{classBST}{B\+ST} tree. \end{DoxyCompactList}\item 
+void \hyperlink{Q1_8cpp_a8a40b9b5b12145c6dc3f5d15ce399d6a}{print\+Paths} (\hyperlink{classAVL}{A\+VL} $\ast$avl\+Node, int $\ast$arr, int length)
+\begin{DoxyCompactList}\small\item\em This method prints the path from a node to all the leaves of \hyperlink{classAVL}{A\+VL} Tree. \end{DoxyCompactList}\item 
+void \hyperlink{Q1_8cpp_ad37ca4e2b6a759eb41cac73929bf9c8b}{get\+Paths} (\hyperlink{classAVL}{A\+VL} $\ast$avl\+Node)
+\begin{DoxyCompactList}\small\item\em This method returns all the paths of the \hyperlink{classAVL}{A\+VL} tree. \end{DoxyCompactList}\item 
+vector$<$ int $>$ \hyperlink{Q1_8cpp_aefc82e53860e37b67c327a3f36e37ac7}{get\+B\+ST} (\hyperlink{classBST}{B\+ST} $\ast$bst\+Node)
+\begin{DoxyCompactList}\small\item\em This method stores the \hyperlink{classBST}{B\+ST} Tree in a vector. \end{DoxyCompactList}\item 
+void \hyperlink{Q1_8cpp_af0bb8d3f3ff05f68a25a7ca7b03d540a}{B\+S\+Tin\+Order} (\hyperlink{classBST}{B\+ST} $\ast$bst\+Node)
+\begin{DoxyCompactList}\small\item\em This method prints the inorder traversal of \hyperlink{classBST}{B\+ST} Tree. \end{DoxyCompactList}\item 
+void \hyperlink{Q1_8cpp_ac25c15e2499e31904fbd2650ec363f9e}{print\+B\+S\+T\+Tree} (\hyperlink{classBST}{B\+ST} $\ast$bst\+Node, int space)
+\begin{DoxyCompactList}\small\item\em This method prints the \hyperlink{classBST}{B\+ST} Tree with proper indentation. \end{DoxyCompactList}\item 
+void \hyperlink{Q1_8cpp_a70407ce3bae050c900250e1910dee725}{A\+V\+Lin\+Order} (\hyperlink{classAVL}{A\+VL} $\ast$avl\+Node)
+\begin{DoxyCompactList}\small\item\em This method prints the inorder traversal of \hyperlink{classAVL}{A\+VL} Tree. \end{DoxyCompactList}\item 
+void \hyperlink{Q1_8cpp_abc170c3a55eec2935d381f174f75878c}{print\+A\+V\+L\+Tree} (\hyperlink{classAVL}{A\+VL} $\ast$avl\+Node, int space)
+\begin{DoxyCompactList}\small\item\em This method prints the \hyperlink{classAVL}{A\+VL} Tree with proper indentation. \end{DoxyCompactList}\item 
+void \hyperlink{Q1_8cpp_a2670504f889c687ef7591e93746110b8}{leftrotate} (\hyperlink{classRBTree}{R\+B\+Tree} $\ast$rb\+Node)
+\begin{DoxyCompactList}\small\item\em This method performs left rotation of any node in \hyperlink{classRBTree}{R\+B\+Tree}. \end{DoxyCompactList}\item 
+void \hyperlink{Q1_8cpp_a3947baf51681a17c44fbd6a58a912620}{rightrotate} (\hyperlink{classRBTree}{R\+B\+Tree} $\ast$rb\+Node)
+\begin{DoxyCompactList}\small\item\em This method performs right rotation of any node in \hyperlink{classRBTree}{R\+B\+Tree}. \end{DoxyCompactList}\item 
+void \hyperlink{Q1_8cpp_ae40cd4c68638e53e6c3b4d9f27183515}{insertfix} (\hyperlink{classRBTree}{R\+B\+Tree} $\ast$rb\+Node)
+\begin{DoxyCompactList}\small\item\em This method performs the fixing of color and rotation after insertion of a node in RB Tree. \end{DoxyCompactList}\item 
+void \hyperlink{Q1_8cpp_a65d12c73ef8575049f3d51e6f68b8a5d}{insert} (int z)
+\begin{DoxyCompactList}\small\item\em This method inserts a node in RB Tree. \end{DoxyCompactList}\item 
+int \hyperlink{Q1_8cpp_a614f7bef3f86aa692d01b1a2d0c22397}{get\+Height} (\hyperlink{classRBTree}{R\+B\+Tree} $\ast$rb\+Node)
+\begin{DoxyCompactList}\small\item\em This method returns height of node in RB Tree. \end{DoxyCompactList}\item 
+int \hyperlink{Q1_8cpp_a91404372dd56277bc2a2c308b0125472}{get\+Balance} (\hyperlink{classRBTree}{R\+B\+Tree} $\ast$rb\+Node)
+\begin{DoxyCompactList}\small\item\em This method returns the balance factor of node in RB Tree. \end{DoxyCompactList}\item 
+void \hyperlink{Q1_8cpp_a75cc8950e1184ccb7d49e666d88bf5ee}{print\+R\+B\+Tree} (\hyperlink{classRBTree}{R\+B\+Tree} $\ast$rb\+Node, int space)
+\begin{DoxyCompactList}\small\item\em This method prints the RB Tree with proper indentation. \end{DoxyCompactList}\item 
+void \hyperlink{Q1_8cpp_a462fa8912c7bf530962dc0fbb35ac4b1}{R\+B\+Tree\+In\+Order} (\hyperlink{classRBTree}{R\+B\+Tree} $\ast$rb\+Node)
+\begin{DoxyCompactList}\small\item\em This method prints the inorder traversal of RB Tree. \end{DoxyCompactList}\item 
+void \hyperlink{Q1_8cpp_a6b0b638edd0e48e82401de365c1f10aa}{print\+Paths} (\hyperlink{classRBTree}{R\+B\+Tree} $\ast$rb\+Node, int $\ast$arr, int size)
+\begin{DoxyCompactList}\small\item\em This method prints the path from a node to all the leaves of \hyperlink{classAVL}{A\+VL} Tree. \end{DoxyCompactList}\item 
+void \hyperlink{Q1_8cpp_a36bcb8cca654b7d8fecd765b5455703d}{get\+Paths} (\hyperlink{classRBTree}{R\+B\+Tree} $\ast$rb\+Node)
+\begin{DoxyCompactList}\small\item\em This method returns all the paths of the RB tree. \end{DoxyCompactList}\item 
+int \hyperlink{Q1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em This method creates a menu for insertion in Binary Search Tree and RB Tree and creates a \hyperlink{classAVL}{A\+VL} Tree from Binary Search Tree. This method prints inorder of all trees and even displays all the paths in tree and prints the nodes of tree with proper indentation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{Q1_8cpp_a9d75c9ca70fceb20bd3118cca57a7a0a}\label{Q1_8cpp_a9d75c9ca70fceb20bd3118cca57a7a0a}} 
-vector$<$ int $>$ {\bfseries v}
+\mbox{\Hypertarget{Q1_8cpp_ab01909fa7f88c726fe0ba41b02047035}\label{Q1_8cpp_ab01909fa7f88c726fe0ba41b02047035}} 
+vector$<$ int $>$ \hyperlink{Q1_8cpp_ab01909fa7f88c726fe0ba41b02047035}{arr\+B\+ST}
+\begin{DoxyCompactList}\small\item\em Vector of \hyperlink{classBST}{B\+ST} Tree. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Q1_8cpp_af773305a8180295bf0194c540be0445d}\label{Q1_8cpp_af773305a8180295bf0194c540be0445d}} 
+\hyperlink{classRBTree}{R\+B\+Tree} $\ast$ {\bfseries root} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{Q1_8cpp_a6468b59c1cac9d50b64bd8e02d10766b}\label{Q1_8cpp_a6468b59c1cac9d50b64bd8e02d10766b}} 
+\hyperlink{classRBTree}{R\+B\+Tree} $\ast$ {\bfseries q} = N\+U\+LL
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-B\+S\+T/\+Red-\/\+Black-\/\+Tree/\+A\+VL. 
+This program creates binary search tree, \hyperlink{classAVL}{A\+VL} tree and Red-\/\+Black Tree. 
 
 \begin{DoxyAuthor}{Author}
-Harshit Verma
+Harshit Verma 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
-08/17/19 
+2019-\/08-\/20 
 \end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{Q1_8cpp_a70407ce3bae050c900250e1910dee725}\label{Q1_8cpp_a70407ce3bae050c900250e1910dee725}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!A\+V\+Lin\+Order@{A\+V\+Lin\+Order}}
+\index{A\+V\+Lin\+Order@{A\+V\+Lin\+Order}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{A\+V\+Lin\+Order()}{AVLinOrder()}}
+{\footnotesize\ttfamily void A\+V\+Lin\+Order (\begin{DoxyParamCaption}\item[{\hyperlink{classAVL}{A\+VL} $\ast$}]{avl\+Node }\end{DoxyParamCaption})}
+
+
+
+This method prints the inorder traversal of \hyperlink{classAVL}{A\+VL} Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em avl\+Node} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Q1_8cpp_af0bb8d3f3ff05f68a25a7ca7b03d540a}\label{Q1_8cpp_af0bb8d3f3ff05f68a25a7ca7b03d540a}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!B\+S\+Tin\+Order@{B\+S\+Tin\+Order}}
+\index{B\+S\+Tin\+Order@{B\+S\+Tin\+Order}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{B\+S\+Tin\+Order()}{BSTinOrder()}}
+{\footnotesize\ttfamily void B\+S\+Tin\+Order (\begin{DoxyParamCaption}\item[{\hyperlink{classBST}{B\+ST} $\ast$}]{bst\+Node }\end{DoxyParamCaption})}
+
+
+
+This method prints the inorder traversal of \hyperlink{classBST}{B\+ST} Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bst\+Node} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Q1_8cpp_aa6dcce4a9cf63326874b48b764b806cd}\label{Q1_8cpp_aa6dcce4a9cf63326874b48b764b806cd}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!get\+Balance@{get\+Balance}}
+\index{get\+Balance@{get\+Balance}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Balance()}{getBalance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily int get\+Balance (\begin{DoxyParamCaption}\item[{\hyperlink{classAVL}{A\+VL} $\ast$}]{avl\+Node }\end{DoxyParamCaption})}
+
+
+
+This method returns the balance factor of particular node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em avl\+Node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Q1_8cpp_ab6d3db1169f6a849ba35cbc4e7d9bf1a}\label{Q1_8cpp_ab6d3db1169f6a849ba35cbc4e7d9bf1a}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!get\+Balance@{get\+Balance}}
+\index{get\+Balance@{get\+Balance}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Balance()}{getBalance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily int get\+Balance (\begin{DoxyParamCaption}\item[{\hyperlink{classBST}{B\+ST} $\ast$}]{bst\+Node }\end{DoxyParamCaption})}
+
+
+
+This method returns the balance factor of any node in \hyperlink{classBST}{B\+ST} Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bst\+Node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Q1_8cpp_a91404372dd56277bc2a2c308b0125472}\label{Q1_8cpp_a91404372dd56277bc2a2c308b0125472}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!get\+Balance@{get\+Balance}}
+\index{get\+Balance@{get\+Balance}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Balance()}{getBalance()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily int get\+Balance (\begin{DoxyParamCaption}\item[{\hyperlink{classRBTree}{R\+B\+Tree} $\ast$}]{rb\+Node }\end{DoxyParamCaption})}
+
+
+
+This method returns the balance factor of node in RB Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb\+Node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Q1_8cpp_aefc82e53860e37b67c327a3f36e37ac7}\label{Q1_8cpp_aefc82e53860e37b67c327a3f36e37ac7}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!get\+B\+ST@{get\+B\+ST}}
+\index{get\+B\+ST@{get\+B\+ST}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{get\+B\+S\+T()}{getBST()}}
+{\footnotesize\ttfamily vector$<$int$>$ get\+B\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{classBST}{B\+ST} $\ast$}]{bst\+Node }\end{DoxyParamCaption})}
+
+
+
+This method stores the \hyperlink{classBST}{B\+ST} Tree in a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bst\+Node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$int$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Q1_8cpp_a614f7bef3f86aa692d01b1a2d0c22397}\label{Q1_8cpp_a614f7bef3f86aa692d01b1a2d0c22397}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily int get\+Height (\begin{DoxyParamCaption}\item[{\hyperlink{classRBTree}{R\+B\+Tree} $\ast$}]{rb\+Node }\end{DoxyParamCaption})}
+
+
+
+This method returns height of node in RB Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb\+Node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Q1_8cpp_a2c30ec257402cc134a4540cf2415286c}\label{Q1_8cpp_a2c30ec257402cc134a4540cf2415286c}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!get\+Paths@{get\+Paths}}
+\index{get\+Paths@{get\+Paths}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Paths()}{getPaths()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void get\+Paths (\begin{DoxyParamCaption}\item[{\hyperlink{classBST}{B\+ST} $\ast$}]{bst\+Node }\end{DoxyParamCaption})}
+
+
+
+This method returns all the paths of the \hyperlink{classBST}{B\+ST} tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bst\+Node} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Q1_8cpp_ad37ca4e2b6a759eb41cac73929bf9c8b}\label{Q1_8cpp_ad37ca4e2b6a759eb41cac73929bf9c8b}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!get\+Paths@{get\+Paths}}
+\index{get\+Paths@{get\+Paths}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Paths()}{getPaths()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void get\+Paths (\begin{DoxyParamCaption}\item[{\hyperlink{classAVL}{A\+VL} $\ast$}]{avl\+Node }\end{DoxyParamCaption})}
+
+
+
+This method returns all the paths of the \hyperlink{classAVL}{A\+VL} tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em avl\+Node} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Q1_8cpp_a36bcb8cca654b7d8fecd765b5455703d}\label{Q1_8cpp_a36bcb8cca654b7d8fecd765b5455703d}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!get\+Paths@{get\+Paths}}
+\index{get\+Paths@{get\+Paths}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Paths()}{getPaths()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void get\+Paths (\begin{DoxyParamCaption}\item[{\hyperlink{classRBTree}{R\+B\+Tree} $\ast$}]{rb\+Node }\end{DoxyParamCaption})}
+
+
+
+This method returns all the paths of the RB tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb\+Node} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Q1_8cpp_abd1780243f9283f8ad7d06322c79be6c}\label{Q1_8cpp_abd1780243f9283f8ad7d06322c79be6c}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!height@{height}}
+\index{height@{height}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{height()}{height()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int height (\begin{DoxyParamCaption}\item[{\hyperlink{classAVL}{A\+VL} $\ast$}]{avl\+Node }\end{DoxyParamCaption})}
+
+
+
+This method returns height of any node in \hyperlink{classAVL}{A\+VL} Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em avl\+Node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Q1_8cpp_a770597463557adf26b435af635e2803b}\label{Q1_8cpp_a770597463557adf26b435af635e2803b}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!height@{height}}
+\index{height@{height}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{height()}{height()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int height (\begin{DoxyParamCaption}\item[{\hyperlink{classBST}{B\+ST} $\ast$}]{bst\+Node }\end{DoxyParamCaption})}
+
+
+
+This method returns the height of any node in \hyperlink{classBST}{B\+ST} Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bst\+Node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Q1_8cpp_a1ada3e517e98ec2fa0292a21272585d5}\label{Q1_8cpp_a1ada3e517e98ec2fa0292a21272585d5}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!insert@{insert}}
+\index{insert@{insert}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{classAVL}{A\+VL}$\ast$ insert (\begin{DoxyParamCaption}\item[{\hyperlink{classAVL}{A\+VL} $\ast$}]{avl\+Node,  }\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+This method inserts a node in \hyperlink{classAVL}{A\+VL} Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em avl\+Node} & \\
+\hline
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+V\+L$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Q1_8cpp_a255b4a9b37f54e4be10323b9f0f69089}\label{Q1_8cpp_a255b4a9b37f54e4be10323b9f0f69089}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!insert@{insert}}
+\index{insert@{insert}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \hyperlink{classBST}{B\+ST}$\ast$ insert (\begin{DoxyParamCaption}\item[{\hyperlink{classBST}{B\+ST} $\ast$}]{bst\+Node,  }\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+This method inserts a node in \hyperlink{classBST}{B\+ST} Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bst\+Node} & \\
+\hline
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+S\+T$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Q1_8cpp_a65d12c73ef8575049f3d51e6f68b8a5d}\label{Q1_8cpp_a65d12c73ef8575049f3d51e6f68b8a5d}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!insert@{insert}}
+\index{insert@{insert}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void insert (\begin{DoxyParamCaption}\item[{int}]{z }\end{DoxyParamCaption})}
+
+
+
+This method inserts a node in RB Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Q1_8cpp_ae40cd4c68638e53e6c3b4d9f27183515}\label{Q1_8cpp_ae40cd4c68638e53e6c3b4d9f27183515}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!insertfix@{insertfix}}
+\index{insertfix@{insertfix}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{insertfix()}{insertfix()}}
+{\footnotesize\ttfamily void insertfix (\begin{DoxyParamCaption}\item[{\hyperlink{classRBTree}{R\+B\+Tree} $\ast$}]{rb\+Node }\end{DoxyParamCaption})}
+
+
+
+This method performs the fixing of color and rotation after insertion of a node in RB Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb\+Node} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Q1_8cpp_a4c9609578df7bad24533ab52dec74f07}\label{Q1_8cpp_a4c9609578df7bad24533ab52dec74f07}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!left\+Rotate@{left\+Rotate}}
+\index{left\+Rotate@{left\+Rotate}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{left\+Rotate()}{leftRotate()}}
+{\footnotesize\ttfamily \hyperlink{classAVL}{A\+VL}$\ast$ left\+Rotate (\begin{DoxyParamCaption}\item[{\hyperlink{classAVL}{A\+VL} $\ast$}]{avl\+Node }\end{DoxyParamCaption})}
+
+
+
+This method performs the left rotation of nodes to make \hyperlink{classAVL}{A\+VL} Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em avl\+Node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+V\+L$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Q1_8cpp_a2670504f889c687ef7591e93746110b8}\label{Q1_8cpp_a2670504f889c687ef7591e93746110b8}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!leftrotate@{leftrotate}}
+\index{leftrotate@{leftrotate}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{leftrotate()}{leftrotate()}}
+{\footnotesize\ttfamily void leftrotate (\begin{DoxyParamCaption}\item[{\hyperlink{classRBTree}{R\+B\+Tree} $\ast$}]{rb\+Node }\end{DoxyParamCaption})}
+
+
+
+This method performs left rotation of any node in \hyperlink{classRBTree}{R\+B\+Tree}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb\+Node} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Q1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Q1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!main@{main}}
+\index{main@{main}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method creates a menu for insertion in Binary Search Tree and RB Tree and creates a \hyperlink{classAVL}{A\+VL} Tree from Binary Search Tree. This method prints inorder of all trees and even displays all the paths in tree and prints the nodes of tree with proper indentation. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Q1_8cpp_af082905f7eac6d03e92015146bbc1925}\label{Q1_8cpp_af082905f7eac6d03e92015146bbc1925}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!max@{max}}
+\index{max@{max}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily int max (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+This method returns maximum of two numbers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Q1_8cpp_abc170c3a55eec2935d381f174f75878c}\label{Q1_8cpp_abc170c3a55eec2935d381f174f75878c}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!print\+A\+V\+L\+Tree@{print\+A\+V\+L\+Tree}}
+\index{print\+A\+V\+L\+Tree@{print\+A\+V\+L\+Tree}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{print\+A\+V\+L\+Tree()}{printAVLTree()}}
+{\footnotesize\ttfamily void print\+A\+V\+L\+Tree (\begin{DoxyParamCaption}\item[{\hyperlink{classAVL}{A\+VL} $\ast$}]{avl\+Node,  }\item[{int}]{space }\end{DoxyParamCaption})}
+
+
+
+This method prints the \hyperlink{classAVL}{A\+VL} Tree with proper indentation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em avl\+Node} & \\
+\hline
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Q1_8cpp_ac25c15e2499e31904fbd2650ec363f9e}\label{Q1_8cpp_ac25c15e2499e31904fbd2650ec363f9e}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!print\+B\+S\+T\+Tree@{print\+B\+S\+T\+Tree}}
+\index{print\+B\+S\+T\+Tree@{print\+B\+S\+T\+Tree}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{print\+B\+S\+T\+Tree()}{printBSTTree()}}
+{\footnotesize\ttfamily void print\+B\+S\+T\+Tree (\begin{DoxyParamCaption}\item[{\hyperlink{classBST}{B\+ST} $\ast$}]{bst\+Node,  }\item[{int}]{space }\end{DoxyParamCaption})}
+
+
+
+This method prints the \hyperlink{classBST}{B\+ST} Tree with proper indentation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bst\+Node} & \\
+\hline
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Q1_8cpp_a008a09bfbc5758475f41f65c45881468}\label{Q1_8cpp_a008a09bfbc5758475f41f65c45881468}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!print\+Paths@{print\+Paths}}
+\index{print\+Paths@{print\+Paths}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{print\+Paths()}{printPaths()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void print\+Paths (\begin{DoxyParamCaption}\item[{\hyperlink{classBST}{B\+ST} $\ast$}]{bst\+Node,  }\item[{int $\ast$}]{arr,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+This method prints the path from a node to all the leaves of \hyperlink{classBST}{B\+ST} Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bst\+Node} & \\
+\hline
+{\em arr} & \\
+\hline
+{\em length} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Q1_8cpp_a8a40b9b5b12145c6dc3f5d15ce399d6a}\label{Q1_8cpp_a8a40b9b5b12145c6dc3f5d15ce399d6a}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!print\+Paths@{print\+Paths}}
+\index{print\+Paths@{print\+Paths}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{print\+Paths()}{printPaths()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void print\+Paths (\begin{DoxyParamCaption}\item[{\hyperlink{classAVL}{A\+VL} $\ast$}]{avl\+Node,  }\item[{int $\ast$}]{arr,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+This method prints the path from a node to all the leaves of \hyperlink{classAVL}{A\+VL} Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em avl\+Node} & \\
+\hline
+{\em arr} & \\
+\hline
+{\em length} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Q1_8cpp_a6b0b638edd0e48e82401de365c1f10aa}\label{Q1_8cpp_a6b0b638edd0e48e82401de365c1f10aa}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!print\+Paths@{print\+Paths}}
+\index{print\+Paths@{print\+Paths}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{print\+Paths()}{printPaths()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void print\+Paths (\begin{DoxyParamCaption}\item[{\hyperlink{classRBTree}{R\+B\+Tree} $\ast$}]{rb\+Node,  }\item[{int $\ast$}]{arr,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+This method prints the path from a node to all the leaves of \hyperlink{classAVL}{A\+VL} Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb\+Node} & \\
+\hline
+{\em arr} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Q1_8cpp_a75cc8950e1184ccb7d49e666d88bf5ee}\label{Q1_8cpp_a75cc8950e1184ccb7d49e666d88bf5ee}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!print\+R\+B\+Tree@{print\+R\+B\+Tree}}
+\index{print\+R\+B\+Tree@{print\+R\+B\+Tree}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{print\+R\+B\+Tree()}{printRBTree()}}
+{\footnotesize\ttfamily void print\+R\+B\+Tree (\begin{DoxyParamCaption}\item[{\hyperlink{classRBTree}{R\+B\+Tree} $\ast$}]{rb\+Node,  }\item[{int}]{space }\end{DoxyParamCaption})}
+
+
+
+This method prints the RB Tree with proper indentation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb\+Node} & \\
+\hline
+{\em space} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Q1_8cpp_a462fa8912c7bf530962dc0fbb35ac4b1}\label{Q1_8cpp_a462fa8912c7bf530962dc0fbb35ac4b1}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!R\+B\+Tree\+In\+Order@{R\+B\+Tree\+In\+Order}}
+\index{R\+B\+Tree\+In\+Order@{R\+B\+Tree\+In\+Order}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{R\+B\+Tree\+In\+Order()}{RBTreeInOrder()}}
+{\footnotesize\ttfamily void R\+B\+Tree\+In\+Order (\begin{DoxyParamCaption}\item[{\hyperlink{classRBTree}{R\+B\+Tree} $\ast$}]{rb\+Node }\end{DoxyParamCaption})}
+
+
+
+This method prints the inorder traversal of RB Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb\+Node} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Q1_8cpp_a0004ccc336d96984ae68e6c92a663d94}\label{Q1_8cpp_a0004ccc336d96984ae68e6c92a663d94}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!right\+Rotate@{right\+Rotate}}
+\index{right\+Rotate@{right\+Rotate}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{right\+Rotate()}{rightRotate()}}
+{\footnotesize\ttfamily \hyperlink{classAVL}{A\+VL}$\ast$ right\+Rotate (\begin{DoxyParamCaption}\item[{\hyperlink{classAVL}{A\+VL} $\ast$}]{avl\+Node }\end{DoxyParamCaption})}
+
+
+
+This method performs the right rotation of nodes to make \hyperlink{classAVL}{A\+VL} Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em avl\+Node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+V\+L$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Q1_8cpp_a3947baf51681a17c44fbd6a58a912620}\label{Q1_8cpp_a3947baf51681a17c44fbd6a58a912620}} 
+\index{Q1.\+cpp@{Q1.\+cpp}!rightrotate@{rightrotate}}
+\index{rightrotate@{rightrotate}!Q1.\+cpp@{Q1.\+cpp}}
+\subsubsection{\texorpdfstring{rightrotate()}{rightrotate()}}
+{\footnotesize\ttfamily void rightrotate (\begin{DoxyParamCaption}\item[{\hyperlink{classRBTree}{R\+B\+Tree} $\ast$}]{rb\+Node }\end{DoxyParamCaption})}
+
+
+
+This method performs right rotation of any node in \hyperlink{classRBTree}{R\+B\+Tree}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb\+Node} & \\
+\hline
+\end{DoxyParams}
