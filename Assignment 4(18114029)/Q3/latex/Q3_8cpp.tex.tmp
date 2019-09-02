@@ -1,0 +1,51 @@
+\hypertarget{Q3_8cpp}{}\section{Q3.\+cpp File Reference}
+\label{Q3_8cpp}\index{Q3.\+cpp@{Q3.\+cpp}}
+
+
+Subarray problem.  
+
+
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+Include dependency graph for Q3.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Q3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Q3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Q3_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}\label{Q3_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}} 
+int \hyperlink{Q3_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}
+\begin{DoxyCompactList}\small\item\em Global variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Q3_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}\label{Q3_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}} 
+int {\bfseries k}
+\item 
+\mbox{\Hypertarget{Q3_8cpp_a20a0f494ca2c397f664e1911db5e084b}\label{Q3_8cpp_a20a0f494ca2c397f664e1911db5e084b}} 
+int {\bfseries S} = 0
+\item 
+\mbox{\Hypertarget{Q3_8cpp_a89606eca6b563ec68d2da2e84657736f}\label{Q3_8cpp_a89606eca6b563ec68d2da2e84657736f}} 
+int {\bfseries l}
+\item 
+\mbox{\Hypertarget{Q3_8cpp_acab531abaa74a7e664e3986f2522b33a}\label{Q3_8cpp_acab531abaa74a7e664e3986f2522b33a}} 
+int {\bfseries r}
+\item 
+\mbox{\Hypertarget{Q3_8cpp_acf40520af3f90e4252425ef2d5bdb95a}\label{Q3_8cpp_acf40520af3f90e4252425ef2d5bdb95a}} 
+int {\bfseries ans} =0
+\item 
+\mbox{\Hypertarget{Q3_8cpp_a68f4ca0694e50ce093a401a415145673}\label{Q3_8cpp_a68f4ca0694e50ce093a401a415145673}} 
+unordered\+\_\+map$<$ int, int $>$ {\bfseries unmap}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Subarray problem. 
+
+\begin{DoxyAuthor}{Author}
+Harshit Verma
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/31/19 
+\end{DoxyDate}

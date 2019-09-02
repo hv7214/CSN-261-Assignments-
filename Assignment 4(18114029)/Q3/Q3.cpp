@@ -1,12 +1,21 @@
+/**
+* @file Q3.cpp
+* @brief Subarray problem 
+*
+* @author Harshit Verma
+*
+* @date 08/31/19
+*/
+
 #include<bits/stdc++.h>
 
 using namespace std;
 
-int main()
-{
-	int n, k;
-    unordered_map<int, int> unmap;
-    int S = 0;
+//!Global variables
+int n, k, S = 0, l, r, ans=0;
+unordered_map<int, int> unmap;
+
+int main() {
 	
     cin >> n >> k;
     int a[n];
@@ -18,7 +27,6 @@ int main()
 		unmap[S] = i;
 	}
 
-	int l, r, ans=0;
 	S = 0;
 
 	for(int i = 0; i < n; i++){
