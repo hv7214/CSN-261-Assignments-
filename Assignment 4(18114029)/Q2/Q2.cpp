@@ -1,90 +1,105 @@
-#include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 
-int flag = 0;
-bool is_attacked(int i, int j, int **board, int N){
-	for (int pointer=0; pointer <N; pointer++) {
-		if (board[i][pointer] == 1) return true;
+int combination = 0;
+int **chessboard;
+
+bool checkforattack(int i, int j, int **chessboard, int n){
+
+	for (int x = 0; x < n; x++) {
+		if (chessboard[i][x] == 1) return true;
 	}
 
-	for (int pointer=0; pointer <N; pointer++) {
-		if (board[pointer][j] == 1) return true;
+	for (int x = 0; x < n; x++) {
+		if (chessboard[x][j] == 1) return true;
 	}
 
-	int p=i,q=j;
+	int l = i, r = j;
 
-	if(p==N-1){
-			p=N-q-1;
-			q=0;
-		}
-	else if(q==N-1){
-			q=N-p-1;
-			p=0;
-		}
-	else{
-		p=(p+1)%N;
-		q=(q+1)%N;}
+	if(l == n-1){
+			l = n - r - 1;
+			r = 0;
+	}
 
-	while(p!=i && q!=j){
-		if(board[p][q]==1) return true;
-		if(p==N-1){
-			p=N-q-1;
-			q=0;
+	else if(r == n - 1){
+			r = n - l- 1;
+			l = 0;
+	}
+
+	else {
+		l = (l + 1 ) % n;
+		r = (r + 1) % n;
+    }
+
+	while(l != i && r != j) {
+
+		if(chessboard[l][r]==1) return true;
+		if(l == n-1){
+			l = n - r -1;
+			r = 0;
 		}
-		else if(q==N-1){
-			q=N-p-1;
-			p=0;
+		else if(r == n-1){
+			r = n - l- 1;
+			l = 0;
 		}else{
-		p=(p+1)%N;
-		q=(q+1)%N;}
+		l = (l + 1 ) % n;
+		r = (r + 1 ) % n;}
 	}
 
-	if(p==N-1 || q==0){
-			p=p+q;
-			q=p-q;
-			p=p-q;
-		}
-	else{
-		p=(p+1)%N;
-		q=(q-1+N)%N;}
+	if(l == n-1 || r == 0){
+			l = l+r;
+			r = l-r;
+			l = l-r;
+	}
 
-	while(p!=i && q!=j){
-		if(board[p][q]==1) return true;
-		if(p==N-1 || q==0){
-			p=p+q;
-			q=p-q;
-			p=p-q;
-		} else{
-		p=(p+1)%N;
-		q=(q-1+N)%N;}
+	else {
+		l = (l + 1) % n;
+		r = (r - 1 + n) % n;
+    }
+
+	while(l != i && r != j) {
+
+		if(chessboard[l][r] == 1) return true;
+
+		if(l == n-1 || r == 0){
+			l = l + r;
+			r = l - r;
+			l = l - r;
+		} 
+        else {
+            l = ( l + 1 ) % n;
+            r = ( r - 1 + n ) % n;
+        }
 	}
 
 	return false;
 }
 
-void N_queen(int **board, int N, int number_of_queens, int next_i, int next_j){
+void nQueen(int n, int nq, int ni, int nj){
 
-	if(number_of_queens==0){
-		flag++;
-		cout<<"Solution "<<flag<<" is :"<<endl;
-		for (int i=0;i<N;i++){
-		for(int j=0;j<N;j++){
-			cout<<board[i][j]<<" ";
-		}
-		cout<<endl;
-	}
-		cout<<endl;
+	if(nq == 0){
+		combination++;
+		cout << "Combination " << combination << " is :" << "\n";
+
+		for (int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                cout << chessboard[i][j] << " ";
+		    }
+
+		    cout << "\n";
+	    }
+
+		cout << "\n";
 	}
 
-	for (int i=next_i; i<N; i++){
-		for(int j= i==next_i?next_j:0; j<N; j++){
-			if (is_attacked(i,j,board,N)){
-			}
-			else{
-				board[i][j]=1;
-				N_queen(board, N, number_of_queens-1, i, j);
-				board[i][j]=0;
+	for (int i = ni; i < n; i++){
+		for(int j = (i==ni ? nj:0); j<n; j++){
+			if (!checkforattack(i,j,chessboard,n)){
+		
+				chessboard[i][j]=1;
+				nQueen(n, nq-1, i, j);
+				chessboard[i][j]=0;
 			}
 		}
 	}
@@ -94,16 +109,18 @@ void N_queen(int **board, int N, int number_of_queens, int next_i, int next_j){
 int main()
 {
 	int n;
-	cout<<"Enter n : ";
-	cin>>n;
-	cout<<"\n";
-	int **board;
-	board = new int *[n];
-	for(int i = 0; i < n; i++)
-	    board[i] = new int[n];
+	cout << "Enter n : ";
+    cin >> n;
 
-	N_queen(board, N, N, 0, 0);
-	cout<<"Number of Solutions possible are : "<<flag<<endl<<endl;
+	cout << "\n";
+
+    //!Initializing the board
+	chessboard = new int *[n];
+	for(int i = 0; i < n; i++)
+	    chessboard[i] = new int[n];
+
+	nQueen(n, n, 0, 0);
+	cout<<"Total number of combinations are : " << combination << "\n\n";
 
 	return 0;
 }

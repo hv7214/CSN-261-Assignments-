@@ -5,10 +5,48 @@ Dictionary::Dictionary(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Dictionary)
 {
+    QString path = QDir::currentPath();
+
+    QStringList list = path.split("/");
+    QString Path = "";
+    for(int i{0}; i < list.size()-1; i++) {
+         Path += list[i] + "/";
+    }
+
+    qDebug() << Path;
+
     ui->setupUi(this);
+    LoadData(Path + "Q1/L4_P1_input.csv");
+    button = ui->pushButton;
+    connect(button, SIGNAL(clicked()), this, SLOT(SearchMeaning()));
 }
 
 Dictionary::~Dictionary()
 {
     delete ui;
 }
+
+
+void Dictionary::LoadData(QString filename) {
+    QFile file(filename);
+
+    if(!file.open(QFile::ReadOnly | QFile::Text)) {
+        qDebug() << "could not open file";
+        return;
+    }
+    QTextStream in(&file);
+    QString text;
+
+    while((text = in.readLine()) != "") {
+        QStringList query = text.split(",");
+        trie.insert(query[0], query[1]);
+    }
+
+}
+void Dictionary::SearchMeaning() {
+    QString word = ui->textEdit->toPlainText();
+    word = word.trimmed();
+    ui->textEdit_2->clear();
+    ui->textEdit_2->setText(trie.search(word));
+}
+

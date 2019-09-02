@@ -396,7 +396,7 @@ void PrintAllPaths(t *root) {
 }
 
 /*
-* Helper functio for PrintAllPaths function
+* Helper function for PrintAllPaths function
 * @author harshit Verma
 * @date 08/17/2019
 */

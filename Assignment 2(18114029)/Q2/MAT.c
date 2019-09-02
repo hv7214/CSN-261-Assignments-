@@ -180,7 +180,13 @@ int main() {
     read_inputfile();
 
     int x = MAT(1, 1, N, N, 1, 0);
-	
+    
+    // for(int i = 1; i < N+1; i++) {
+    //     for(int j = 1; j < N+1; j++) {
+    //         printf("%d ", a[i][j]);
+    //     }
+    //     putchar('\n');
+    // }    
     while(1) {
         
         printf("------- Medial axis transformation (MAT) -------\n");
