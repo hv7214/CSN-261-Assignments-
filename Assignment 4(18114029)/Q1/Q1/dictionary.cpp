@@ -39,6 +39,12 @@ void Dictionary::LoadData(QString filename) {
 
     while((text = in.readLine()) != "") {
         QStringList query = text.split(",");
+        QString second;
+        for (int i = 1; i < query.size(); ++i){
+                 second.append(query[i]);
+                 if (i != query.size()-1)
+                     second.append(", ");
+        }
         trie.insert(query[0], query[1]);
     }
 
