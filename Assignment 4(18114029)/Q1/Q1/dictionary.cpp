@@ -45,7 +45,7 @@ void Dictionary::LoadData(QString filename) {
                  if (i != query.size()-1)
                      second.append(", ");
         }
-        trie.insert(query[0], query[1]);
+        trie.insert(query[0], second);
     }
 
 }
