@@ -1,0 +1,72 @@
+\hypertarget{Q2_8cpp}{}\section{Q2.\+cpp File Reference}
+\label{Q2_8cpp}\index{Q2.\+cpp@{Q2.\+cpp}}
+
+
+N\+Queens problem.  
+
+
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+Include dependency graph for Q2.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{Q2_8cpp_ae43ce834bfded92bcc73455a6bea91a8}{checkforattack} (int i, int j, int $\ast$$\ast$chessboard, int n)
+\item 
+void \hyperlink{Q2_8cpp_ae7fa013c55d128293f33392b3ff3cdbf}{n\+Queen} (int n, int nq, int ni, int nj)
+\item 
+int \hyperlink{Q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Q2_8cpp_a8b44665966e9d7385073075f9e882a44}\label{Q2_8cpp_a8b44665966e9d7385073075f9e882a44}} 
+int {\bfseries combination} = 0
+\item 
+\mbox{\Hypertarget{Q2_8cpp_aa397c1779628b5f4432ccba9a7e41969}\label{Q2_8cpp_aa397c1779628b5f4432ccba9a7e41969}} 
+int $\ast$$\ast$ {\bfseries chessboard}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+N\+Queens problem. 
+
+\begin{DoxyAuthor}{Author}
+Harshit Verma
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/31/19 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{Q2_8cpp_ae43ce834bfded92bcc73455a6bea91a8}\label{Q2_8cpp_ae43ce834bfded92bcc73455a6bea91a8}} 
+\index{Q2.\+cpp@{Q2.\+cpp}!checkforattack@{checkforattack}}
+\index{checkforattack@{checkforattack}!Q2.\+cpp@{Q2.\+cpp}}
+\subsubsection{\texorpdfstring{checkforattack()}{checkforattack()}}
+{\footnotesize\ttfamily bool checkforattack (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int $\ast$$\ast$}]{chessboard,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+This function will be used to check for any conflicting positions, helper function of nqueen \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/31/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{Q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Q2.\+cpp@{Q2.\+cpp}!main@{main}}
+\index{main@{main}!Q2.\+cpp@{Q2.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initializing the board \mbox{\Hypertarget{Q2_8cpp_ae7fa013c55d128293f33392b3ff3cdbf}\label{Q2_8cpp_ae7fa013c55d128293f33392b3ff3cdbf}} 
+\index{Q2.\+cpp@{Q2.\+cpp}!n\+Queen@{n\+Queen}}
+\index{n\+Queen@{n\+Queen}!Q2.\+cpp@{Q2.\+cpp}}
+\subsubsection{\texorpdfstring{n\+Queen()}{nQueen()}}
+{\footnotesize\ttfamily void n\+Queen (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{nq,  }\item[{int}]{ni,  }\item[{int}]{nj }\end{DoxyParamCaption})}
+
+This function will be used to find all possible combination of chessboard \begin{DoxyAuthor}{Author}
+harshit Verma 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/31/2019 
+\end{DoxyDate}

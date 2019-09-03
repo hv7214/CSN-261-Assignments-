@@ -1,3 +1,12 @@
+/**
+* @file Q2.cpp
+* @brief NQueens problem 
+*
+* @author Harshit Verma
+*
+* @date 08/31/19
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -5,6 +14,11 @@ using namespace std;
 int combination = 0;
 int **chessboard;
 
+/**
+* This function will be used to check for any conflicting positions, helper function of nqueen
+* @author harshit Verma
+* @date 08/31/2019
+*/
 bool checkforattack(int i, int j, int **chessboard, int n){
 
 	for (int x = 0; x < n; x++) {
@@ -76,6 +90,11 @@ bool checkforattack(int i, int j, int **chessboard, int n){
 	return false;
 }
 
+/**
+* This function will be used to find all possible combination of chessboard
+* @author harshit Verma
+* @date 08/31/2019
+*/
 void nQueen(int n, int nq, int ni, int nj){
 
 	if(nq == 0){
@@ -104,7 +123,6 @@ void nQueen(int n, int nq, int ni, int nj){
 		}
 	}
 }
-
 
 int main()
 {
