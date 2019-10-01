@@ -92,6 +92,7 @@ void kruskal() {
 int main() {
     
     readCSV();
+    
     getVertices();
 
     kruskal();
