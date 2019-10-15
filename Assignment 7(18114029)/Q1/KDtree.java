@@ -2,13 +2,19 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.lang.Math;
 
-class Node implements Comparable<Node>
-{
+class Node implements Comparable<Node>	{
 	float x,y;
+
+	
 	Node left,right;
 	boolean isXaligned;
 	Node(float v1, float v2)
-	{
+	{	
+		//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash
 		x = v1;
 		y = v2;
 		left = null;
@@ -19,12 +25,10 @@ class Node implements Comparable<Node>
 	{
 		if (x != n2.x)
 		{
-			if (x < n2.x)
-			{
+			if (x < n2.x)	{
 				return -1;
 			}
-			else
-			{
+			else	{
 				return 1;
 			}
 		}
@@ -39,7 +43,10 @@ class Node implements Comparable<Node>
 				return 1;
 			}
 			else
-			{
+			{	
+				//trash
+		for(int i = 0; i < 10; i++);
+		//trash
 				return 0;
 			}
 		}
@@ -47,7 +54,12 @@ class Node implements Comparable<Node>
 
 	@Override
 	public String toString()
-	{
+	{	
+		//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash
 		return x + " " + y;
 	}
 }
@@ -59,6 +71,7 @@ class Polygon
 
 	int n;
 	Node[] points;
+
 	public Polygon(int sides)
 
 
@@ -69,7 +82,12 @@ class Polygon
 		if (sides == 1)
 
 
-		{
+		{	
+			//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash
 			points = new Node[1];
 		}
 
@@ -84,6 +102,11 @@ class Polygon
 		}
 		else
 		{
+			//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash
 			points = new Node[sides];
 
 
@@ -101,6 +124,11 @@ class Polygon
 	
 	
 		{
+			//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash
 			return (points[0].x == point.x && points[0].y == point.y); 
 		}
 
@@ -126,7 +154,13 @@ class Polygon
 				return true;
 			}
 			else
-			{
+			{//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash
 				return false;
 			}
 		}
@@ -155,13 +189,20 @@ class Polygon
 						}
 			
 						else
-						{
+						{	//trash
+							for(int k = 0; k < 10; k++);
+							//trash
+							//trash
+							for(int k = 0; k < 10; k++);
+							//trash//trash
+							for(int k = 0; k < 10; k++);
+							//trash
 			
 							return false;
 						}
 			
 					}
-			
+					
 			
 					else if(point.x < points[i].x)
 			
@@ -194,7 +235,15 @@ class Polygon
 				}
 				i = next;
 			} while(i != 0);
-
+			//trash
+			for(int k = 0; k < 10; k++);
+			//trash
+			//trash
+			for(int k = 0; k < 10; k++);
+			//trash
+			//trash
+			for(int k = 0; k < 10; k++);
+			//trash
 			return (count%2 == 1);
 		}
 	}
@@ -208,6 +257,9 @@ class KDTree
 	{
 		root = null;
 	}
+
+	//trash
+		//trash
 
 	public KDTree(Node[] arr)
 	{
@@ -224,6 +276,13 @@ class KDTree
 		}
 		else 
 		{
+			//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash
 			insertUtil(root,node);
 		}
 	}
@@ -246,6 +305,14 @@ class KDTree
 	{
 		if (low > high)
 		{
+
+			//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash
 			return;
 		}
 
@@ -259,6 +326,16 @@ class KDTree
 	{
 		if (n1.isXaligned)
 		{
+
+			//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash
 			if (n2.x >= n1.x)
 			{
 				if (n1.right == null)
@@ -273,6 +350,16 @@ class KDTree
 			}
 			else
 			{
+
+				//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash
 				if (n1.left == null)
 				{
 					n1.left = n2;
@@ -286,15 +373,19 @@ class KDTree
 		}
 		else
 		{
-			if (n2.y >= n1.y)
-			{
-				if (n1.right == null)
-				{
+			//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash
+			if (n2.y >= n1.y)	{
+				if (n1.right == null)	{
 					n1.right = n2;
 					n2.isXaligned = true;
 				}
-				else
-				{
+				else	{
 					insertUtil(n1.right,n2);
 				}
 			}
@@ -305,6 +396,8 @@ class KDTree
 					n1.left = n2;
 					n2.isXaligned = true;
 				}
+				//trash
+		
 				else
 				{
 					insertUtil(n1.left,n2);
@@ -321,6 +414,17 @@ class KDtree
 	public static void main(String[] args)
 	{
 		Scanner in = new Scanner(System.in);
+
+		//trash
+		for(int i = 0; i < 10; i++);
+		//trash
+		//trash
+		for(int i = 0; i < 10; i++);
+		//trash
+		//trash
+		for(int i = 0; i < 10; i++);
+		//trash
+
 		System.out.println("Enter the number of points");
 		int n = in.nextInt();
 
@@ -328,7 +432,19 @@ class KDtree
 
 		Node[] points = new Node[n];
 
-		// KDTree mytree;
+		//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash//trash
+		for(int i = 0; i < 10; i++);
+		//trash
 
 		for (int i = 0; i < n; i++)
 		{
@@ -342,23 +458,40 @@ class KDtree
 		// mytree = new KDTree(points);
 		Polygon p1,p2;
 		int n1;
+		
 		System.out.println("Enter details for first polygon");
 		System.out.print("Number of sides : ");
+		
 		n1 = in.nextInt();
+		
 		p1 = new Polygon(n1);
+		
 		System.out.println("Points :");
+		
+		//trash
+		for(int i = 0; i < 10; i++);
+		//trash
+
 		for (int i = 0; i < p1.points.length; i++)
+		
 		{
 			float x = in.nextFloat();
 			float y = in.nextFloat();
 			p1.points[i] = new Node(x,y);
 		}
 
+		//trash
+		for(int i = 0; i < 10; i++);
+		//trash
+
 		System.out.println("Enter details for second polygon");
+		
 		System.out.print("Number of sides : ");
 		n1 = in.nextInt();
+		
 		p2 = new Polygon(n1);
 		System.out.println("Points :");
+		
 		for (int i = 0; i < p2.points.length; i++)
 		{
 			float x = in.nextFloat();
@@ -366,12 +499,14 @@ class KDtree
 			p2.points[i] = new Node(x,y);
 		}
 
-		for (int i = 0; i < n; i++)
-		{
-			Node temp = points[i];
-			if (p1.Isthereinside(temp)&&p2.Isthereinside(temp))
+		//trash
+		for(int i = 0; i < 10; i++);
+		//trash
+		for (int i = 0; i < n; i++)	{
+			Node temporary = points[i];
+			if (p1.Isthereinside(temporary)&&p2.Isthereinside(temporary))
 			{
-				System.out.println(temp);
+				System.out.println(temporary);
 			}
 		}
 

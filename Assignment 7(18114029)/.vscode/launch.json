@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - KDTree_TwoD_Data",
+            "request": "launch",
+            "mainClass": "Q1.KDTree_TwoD_Data",
+            "projectName": "Assignment 7(18114029)_8e6087ea"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Q1.Main",
+            "projectName": "Assignment 7(18114029)_8e6087ea"
+        }
+    ]
+}

@@ -10,6 +10,7 @@ struct Edge{
 vector<Edge> input, output;
 map<char, char> parent;
 int V = 0;
+int totalWeight = 0;
 
 bool compare( Edge e1, Edge e2) {
     return e1.weight < e2.weight;
@@ -26,7 +27,7 @@ void readCSV() {
             Edge e ;
             e.source  = line[0];
             e.dest    = line[2];
-            e.weight  = line[4]-48;
+            e.weight  = stoi(line.substr(4, line.length()-1));
             input.push_back(e);  
         }
     }
@@ -36,7 +37,7 @@ void readCSV() {
 
 void writeOutputFile() {
 
-    string filename = "output.gv";
+    string filename = "output.dot";
     fstream file(filename, ios::out | ios::trunc);
 
     file << "graph G{\n";
@@ -44,6 +45,8 @@ void writeOutputFile() {
     for(auto e : output) {
         string line = "    " + string(1, e.source) + "--" + string(1, e.dest) + "[label=" + to_string(e.weight) + "];\n";
         file << line;
+
+        totalWeight += e.weight;
     }
 
     file << "}";
@@ -98,4 +101,11 @@ int main() {
     kruskal();
 
     writeOutputFile(); 
+    for(auto e : input) {
+        cout << e.source << " " << e.dest << " " << e.weight << "\n";  
+    }
+
+    cout <<"Total Weight :" <<  totalWeight << "\n";
+
+    system("dot -Tps ./output.dot -o q2.pdf");
 }

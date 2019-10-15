@@ -56,7 +56,7 @@ public class SegmentTreeMax {
     
     private int getMaxUtil(int lptr, int rptr, int pos, int l, int r) {
 
-        if (lptr >= l && rptr <= rptr) 
+        if (lptr >= l && r >= rptr) 
             return tree[pos];
         if (lptr > r || rptr < l) 
             return -1;
