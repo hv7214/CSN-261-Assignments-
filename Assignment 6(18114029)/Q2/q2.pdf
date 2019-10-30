@@ -178,105 +178,173 @@ def
 %%EndSetup
 setupLatin1
 %%Page: 1 1
-%%PageBoundingBox: 36 36 314 224
+%%PageBoundingBox: 36 36 386 296
 %%PageOrientation: Portrait
 0 0 1 beginpage
 gsave
-36 36 278 188 boxprim clip newpath
+36 36 350 260 boxprim clip newpath
 1 1 set_scale 0 rotate 40 40 translate
-% 70
+% 90
 gsave
 1 setlinewidth
 0 0 0 nodecolor
-27 162 27 18 ellipse_path stroke
+27 234 27 18 ellipse_path stroke
 0 0 0 nodecolor
 14 /Times-Roman set_font
-20 158.3 moveto 14 (70) alignedtext
+20 230.3 moveto 14 (90) alignedtext
 grestore
-% 50
+% 60
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+99 234 27 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+92 230.3 moveto 14 (60) alignedtext
+grestore
+% 80
 gsave
 1 setlinewidth
 0 0 0 nodecolor
 99 162 27 18 ellipse_path stroke
 0 0 0 nodecolor
 14 /Times-Roman set_font
-92 158.3 moveto 14 (50) alignedtext
+92 158.3 moveto 14 (80) alignedtext
 grestore
-% 60
+% 60--80
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 99 215.8314 moveto
+99 205 99 191.2876 99 180.4133 curveto
+stroke
+grestore
+% 15
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+243 234 27 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+236 230.3 moveto 14 (15) alignedtext
+grestore
+% 40
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+171 162 27 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+164 158.3 moveto 14 (40) alignedtext
+grestore
+% 15--40
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 227.7307 218.7307 moveto
+215.512 206.512 198.4602 189.4602 186.2473 177.2473 curveto
+stroke
+grestore
+% 30
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+243 162 27 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+236 158.3 moveto 14 (30) alignedtext
+grestore
+% 15--30
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 243 215.8314 moveto
+243 205 243 191.2876 243 180.4133 curveto
+stroke
+grestore
+% 25
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+315 162 27 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+308 158.3 moveto 14 (25) alignedtext
+grestore
+% 15--25
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 258.2693 218.7307 moveto
+270.488 206.512 287.5398 189.4602 299.7527 177.2473 curveto
+stroke
+grestore
+% 45
 gsave
 1 setlinewidth
 0 0 0 nodecolor
 99 90 27 18 ellipse_path stroke
 0 0 0 nodecolor
 14 /Times-Roman set_font
-92 86.3 moveto 14 (60) alignedtext
+92 86.3 moveto 14 (45) alignedtext
 grestore
-% 50--60
+% 40--45
 gsave
 1 setlinewidth
 0 0 0 edgecolor
-newpath 99 143.8314 moveto
-99 133 99 119.2876 99 108.4133 curveto
+newpath 155.7307 146.7307 moveto
+143.512 134.512 126.4602 117.4602 114.2473 105.2473 curveto
 stroke
 grestore
-% 10
-gsave
-1 setlinewidth
-0 0 0 nodecolor
-207 162 27 18 ellipse_path stroke
-0 0 0 nodecolor
-14 /Times-Roman set_font
-200 158.3 moveto 14 (10) alignedtext
-grestore
-% 30
+% 55
 gsave
 1 setlinewidth
 0 0 0 nodecolor
 171 90 27 18 ellipse_path stroke
 0 0 0 nodecolor
 14 /Times-Roman set_font
-164 86.3 moveto 14 (30) alignedtext
+164 86.3 moveto 14 (55) alignedtext
 grestore
-% 10--30
+% 40--55
 gsave
 1 setlinewidth
 0 0 0 edgecolor
-newpath 198.2854 144.5708 moveto
-192.6253 133.2506 185.2784 118.5568 179.6343 107.2687 curveto
+newpath 171 143.8314 moveto
+171 133 171 119.2876 171 108.4133 curveto
 stroke
 grestore
-% 20
+% 75
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+99 18 27 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+92 14.3 moveto 14 (75) alignedtext
+grestore
+% 45--75
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 99 71.8314 moveto
+99 61 99 47.2876 99 36.4133 curveto
+stroke
+grestore
+% 35
 gsave
 1 setlinewidth
 0 0 0 nodecolor
 243 90 27 18 ellipse_path stroke
 0 0 0 nodecolor
 14 /Times-Roman set_font
-236 86.3 moveto 14 (20) alignedtext
+236 86.3 moveto 14 (35) alignedtext
 grestore
-% 10--20
+% 30--35
 gsave
 1 setlinewidth
 0 0 0 edgecolor
-newpath 215.7146 144.5708 moveto
-221.3747 133.2506 228.7216 118.5568 234.3657 107.2687 curveto
-stroke
-grestore
-% 40
-gsave
-1 setlinewidth
-0 0 0 nodecolor
-171 18 27 18 ellipse_path stroke
-0 0 0 nodecolor
-14 /Times-Roman set_font
-164 14.3 moveto 14 (40) alignedtext
-grestore
-% 30--40
-gsave
-1 setlinewidth
-0 0 0 edgecolor
-newpath 171 71.8314 moveto
-171 61 171 47.2876 171 36.4133 curveto
+newpath 243 143.8314 moveto
+243 133 243 119.2876 243 108.4133 curveto
 stroke
 grestore
 endpage
@@ -286,7 +354,7 @@ grestore
 %%EndPage: 1
 %%Trailer
 %%Pages: 1
-%%BoundingBox: 36 36 314 224
+%%BoundingBox: 36 36 386 296
 end
 restore
 %%EOF
